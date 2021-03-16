@@ -11,8 +11,17 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    var gameSceneView: SKView?
+
+    override func loadView() {
+        super.loadView()
+        gameSceneView = SKView()
+        self.view = gameSceneView
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .red
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
