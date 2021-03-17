@@ -8,5 +8,14 @@
 import GameplayKit
 
 class AnimatedSpriteComponent: GKComponent {
-    
+    var spriteNode: SKSpriteNode!
+
+    override init() {
+        super.init()
+        spriteNode = SKSpriteNode(color: .white, size: CGSize(width: 100, height: 100))
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

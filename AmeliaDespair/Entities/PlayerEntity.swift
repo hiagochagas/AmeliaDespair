@@ -8,5 +8,14 @@
 import GameplayKit
 
 class PlayerEntity: GKEntity {
-    
+
+    override init() {
+        super.init()
+        self.addComponent(AnimatedSpriteComponent())
+        self.addComponent(MoveComponent())
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

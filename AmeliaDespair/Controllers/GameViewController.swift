@@ -3,7 +3,7 @@
 //  AmeliaDespair
 //
 //  Created by Hiago Chagas on 15/03/21.
-//  swiftlint:disable force_cast
+//
 
 import UIKit
 import SpriteKit
@@ -11,29 +11,35 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
-    var gameSceneView: SKView?
+    var gameSceneView = SKView()
 
-    override func loadView() {
-        super.loadView()
-        gameSceneView = SKView()
-        self.view = gameSceneView
-    }
+//    override func loadView() {
+//        super.loadView()
+//        gameSceneView = SKView()
+//        self.view = gameSceneView
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                // Present the scene
-                view.presentScene(scene)
-            }
-            view.ignoresSiblingOrder = true
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        setupGameScene()
+    }
+
+    func setupGameScene() {
+        view.addSubview(gameSceneView)
+        gameSceneView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            gameSceneView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            gameSceneView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            gameSceneView.topAnchor.constraint(equalTo: view.topAnchor),
+            gameSceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        let scene = GameScene(size: view.bounds.size)
+        scene.scaleMode = .aspectFit
+        scene.anchorPoint = CGPoint(x: 0, y: 0)
+        gameSceneView.presentScene(scene)
+        gameSceneView.ignoresSiblingOrder = true
+        gameSceneView.showsFPS = true
+        gameSceneView.showsNodeCount = true
     }
 
     override var shouldAutorotate: Bool {

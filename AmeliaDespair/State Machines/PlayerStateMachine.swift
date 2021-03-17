@@ -8,5 +8,5 @@
 import GameplayKit
 
 class PlayerStateMachine: GKStateMachine {
-    
+
 }
