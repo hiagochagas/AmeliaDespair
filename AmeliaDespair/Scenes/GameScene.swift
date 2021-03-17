@@ -62,10 +62,10 @@ class GameScene: SKScene {
         joystick.position = convert(joystick.position, to: sceneCamera)
         sceneCamera.addChild(joystick)
         joystick.on(.move) { (movingJoystick) in
-            self.playerMoveComponent?.setVelocity(velocity: movingJoystick.velocity)
+            self.playerMoveComponent?.velocity = movingJoystick.velocity
         }
         joystick.on(.end) { _ in
-            self.playerMoveComponent?.setVelocity(velocity: CGPoint(x: 0, y: 0))
+            self.playerMoveComponent?.velocity = CGPoint(x: 0, y: 0)
         }
     }
 

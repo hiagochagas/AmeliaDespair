@@ -9,19 +9,16 @@ import GameplayKit
 
 class MoveComponent: GKComponent {
     var velocity: CGPoint?
+    let velocityMultiplier: CGFloat = 0.1
 
     var spriteNode: SKSpriteNode? {
         self.entity?.component(ofType: AnimatedSpriteComponent.self)?.spriteNode
     }
 
-    func setVelocity(velocity: CGPoint) {
-        self.velocity = velocity
-    }
-
-    private func move() {
+    func move() {
         if let velocity = velocity {
-            spriteNode?.position.x += velocity.x * 0.1
-            spriteNode?.position.y += velocity.y * 0.1
+            spriteNode?.position.x += velocity.x * velocityMultiplier
+            spriteNode?.position.y += velocity.y * velocityMultiplier
         }
     }
 
