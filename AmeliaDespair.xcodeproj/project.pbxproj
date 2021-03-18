@@ -7,37 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5721ECD82600DBB700A7071C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECD62600DBB700A7071C /* Main.storyboard */; };
+		5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */; };
 		5721ECDC2600DC7D00A7071C /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECDB2600DC7D00A7071C /* PlayerEntity.swift */; };
 		5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */; };
 		5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE12600DCD100A7071C /* CrackedHeadEntity.swift */; };
 		5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */; };
-		5721ECE82600DD3500A7071C /* WalkComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE72600DD3500A7071C /* WalkComponent.swift */; };
+		5721ECE82600DD3500A7071C /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE72600DD3500A7071C /* MoveComponent.swift */; };
 		5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */; };
-		5721ECEE2600DDB200A7071C /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECED2600DDB200A7071C /* Placeholder */; };
-		5721ECF12600DDD200A7071C /* Placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECF02600DDD200A7071C /* Placeholder */; };
+		5721ECEE2600DDB200A7071C /* AtlasPlaceholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECED2600DDB200A7071C /* AtlasPlaceholder */; };
+		5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECF02600DDD200A7071C /* AudioPlaceholder */; };
 		5721ECF42600DDFC00A7071C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF32600DDFC00A7071C /* MainMenuView.swift */; };
 		5721ECF72600DE4E00A7071C /* PlayerStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF62600DE4E00A7071C /* PlayerStateMachine.swift */; };
+		5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF92600EA8100A7071C /* AnalogJoystick.swift */; };
 		5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BF252600D3F50032D010 /* SceneDelegate.swift */; };
+		578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F26DE2602477700B421E4 /* MoveComponentTests.swift */; };
 		6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */; };
 		6EF9A8AF25FFA3BF007A751D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8AE25FFA3BF007A751D /* GameScene.swift */; };
 		6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B025FFA3BF007A751D /* GameViewController.swift */; };
 		6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B525FFA3C0007A751D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		578F26E12602477700B421E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EF9A89D25FFA3BF007A751D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6EF9A8A425FFA3BF007A751D;
+			remoteInfo = AmeliaDespair;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		5721ECD72600DBB700A7071C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5721ECD72600DBB700A7071C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5721ECDB2600DC7D00A7071C /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongHandsEntity.swift; sourceTree = "<group>"; };
 		5721ECE12600DCD100A7071C /* CrackedHeadEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackedHeadEntity.swift; sourceTree = "<group>"; };
 		5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendlyNPCEntity.swift; sourceTree = "<group>"; };
-		5721ECE72600DD3500A7071C /* WalkComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkComponent.swift; sourceTree = "<group>"; };
+		5721ECE72600DD3500A7071C /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
 		5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSpriteComponent.swift; sourceTree = "<group>"; };
-		5721ECED2600DDB200A7071C /* Placeholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
-		5721ECF02600DDD200A7071C /* Placeholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = Placeholder; sourceTree = "<group>"; };
+		5721ECED2600DDB200A7071C /* AtlasPlaceholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = AtlasPlaceholder; sourceTree = "<group>"; };
+		5721ECF02600DDD200A7071C /* AudioPlaceholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = AudioPlaceholder; sourceTree = "<group>"; };
 		5721ECF32600DDFC00A7071C /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		5721ECF62600DE4E00A7071C /* PlayerStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateMachine.swift; sourceTree = "<group>"; };
+		5721ECF92600EA8100A7071C /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
 		5751BF252600D3F50032D010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmeliaDespairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		578F26DE2602477700B421E4 /* MoveComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentTests.swift; sourceTree = "<group>"; };
+		578F26E02602477700B421E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeliaDespair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EF9A8AE25FFA3BF007A751D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -47,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		578F26D92602477700B421E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EF9A8A225FFA3BF007A751D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,7 +102,7 @@
 		5751BF1D2600D2B10032D010 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5721ECE72600DD3500A7071C /* WalkComponent.swift */,
+				5721ECE72600DD3500A7071C /* MoveComponent.swift */,
 				5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */,
 			);
 			path = Components;
@@ -96,7 +119,7 @@
 		5751BF1F2600D30B0032D010 /* Atlas */ = {
 			isa = PBXGroup;
 			children = (
-				5721ECED2600DDB200A7071C /* Placeholder */,
+				5721ECED2600DDB200A7071C /* AtlasPlaceholder */,
 			);
 			path = Atlas;
 			sourceTree = "<group>";
@@ -113,7 +136,7 @@
 		5751BF212600D3430032D010 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				5721ECF02600DDD200A7071C /* Placeholder */,
+				5721ECF02600DDD200A7071C /* AudioPlaceholder */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -143,10 +166,20 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		578F26DD2602477700B421E4 /* AmeliaDespairTests */ = {
+			isa = PBXGroup;
+			children = (
+				578F26DE2602477700B421E4 /* MoveComponentTests.swift */,
+				578F26E02602477700B421E4 /* Info.plist */,
+			);
+			path = AmeliaDespairTests;
+			sourceTree = "<group>";
+		};
 		6EF9A89C25FFA3BF007A751D = {
 			isa = PBXGroup;
 			children = (
 				6EF9A8A725FFA3BF007A751D /* AmeliaDespair */,
+				578F26DD2602477700B421E4 /* AmeliaDespairTests */,
 				6EF9A8A625FFA3BF007A751D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */,
+				578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,9 +204,10 @@
 				5751BF222600D3630032D010 /* Scenes */,
 				5751BF202600D3380032D010 /* Assets */,
 				5751BF1E2600D2B70032D010 /* State Machines */,
-				5721ECD62600DBB700A7071C /* Main.storyboard */,
+				5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */,
 				6EF9A8B525FFA3C0007A751D /* Assets.xcassets */,
 				6EF9A8B725FFA3C0007A751D /* Info.plist */,
+				5721ECF92600EA8100A7071C /* AnalogJoystick.swift */,
 			);
 			path = AmeliaDespair;
 			sourceTree = "<group>";
@@ -180,6 +215,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		578F26DB2602477700B421E4 /* AmeliaDespairTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 578F26E32602477700B421E4 /* Build configuration list for PBXNativeTarget "AmeliaDespairTests" */;
+			buildPhases = (
+				578F26D82602477700B421E4 /* Sources */,
+				578F26D92602477700B421E4 /* Frameworks */,
+				578F26DA2602477700B421E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				578F26E22602477700B421E4 /* PBXTargetDependency */,
+			);
+			name = AmeliaDespairTests;
+			productName = AmeliaDespairTests;
+			productReference = 578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6EF9A8A425FFA3BF007A751D /* AmeliaDespair */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EF9A8BA25FFA3C0007A751D /* Build configuration list for PBXNativeTarget "AmeliaDespair" */;
@@ -207,6 +260,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					578F26DB2602477700B421E4 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 6EF9A8A425FFA3BF007A751D;
+					};
 					6EF9A8A425FFA3BF007A751D = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -226,19 +283,27 @@
 			projectRoot = "";
 			targets = (
 				6EF9A8A425FFA3BF007A751D /* AmeliaDespair */,
+				578F26DB2602477700B421E4 /* AmeliaDespairTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		578F26DA2602477700B421E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EF9A8A325FFA3BF007A751D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5721ECEE2600DDB200A7071C /* Placeholder in Resources */,
+				5721ECEE2600DDB200A7071C /* AtlasPlaceholder in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
-				5721ECF12600DDD200A7071C /* Placeholder in Resources */,
-				5721ECD82600DBB700A7071C /* Main.storyboard in Resources */,
+				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
+				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +330,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		578F26D82602477700B421E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EF9A8A125FFA3BF007A751D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,7 +351,8 @@
 				5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */,
 				5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */,
 				5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */,
-				5721ECE82600DD3500A7071C /* WalkComponent.swift in Sources */,
+				5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */,
+				5721ECE82600DD3500A7071C /* MoveComponent.swift in Sources */,
 				5721ECF72600DE4E00A7071C /* PlayerStateMachine.swift in Sources */,
 				5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */,
 			);
@@ -286,18 +360,66 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		578F26E22602477700B421E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6EF9A8A425FFA3BF007A751D /* AmeliaDespair */;
+			targetProxy = 578F26E12602477700B421E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		5721ECD62600DBB700A7071C /* Main.storyboard */ = {
+		5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5721ECD72600DBB700A7071C /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		578F26E42602477700B421E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 828XYUZTZQ;
+				INFOPLIST_FILE = AmeliaDespairTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ameliaDespair.AmeliaDespairTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmeliaDespair.app/AmeliaDespair";
+			};
+			name = Debug;
+		};
+		578F26E52602477700B421E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 828XYUZTZQ;
+				INFOPLIST_FILE = AmeliaDespairTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ameliaDespair.AmeliaDespairTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmeliaDespair.app/AmeliaDespair";
+			};
+			name = Release;
+		};
 		6EF9A8B825FFA3C0007A751D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,13 +542,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.AmeliaDespair;
+				PRODUCT_BUNDLE_IDENTIFIER = ameliaDespair.AmeliaDespair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,13 +561,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = hiagochagas.AmeliaDespair;
+				PRODUCT_BUNDLE_IDENTIFIER = ameliaDespair.AmeliaDespair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		578F26E32602477700B421E4 /* Build configuration list for PBXNativeTarget "AmeliaDespairTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				578F26E42602477700B421E4 /* Debug */,
+				578F26E52602477700B421E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6EF9A8A025FFA3BF007A751D /* Build configuration list for PBXProject "AmeliaDespair" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
