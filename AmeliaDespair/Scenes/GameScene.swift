@@ -40,6 +40,12 @@ class GameScene: SKScene {
         setupCamera()
         setupPlayerSprite()
         setupJoystick()
+//        Wall to test the collision
+//        let wall = SKShapeNode(rect: CGRect(x: 400, y: 500, width: 50, height: 100))
+//        addChild(wall)
+//        wall.physicsBody = SKPhysicsBody(edgeLoopFrom: wall.frame)
+//        wall.physicsBody?.affectedByGravity = false
+
     }
 
     func setupCamera() {
@@ -52,6 +58,7 @@ class GameScene: SKScene {
             return
         }
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
+        player.component(ofType: ColisionComponent.self)?.loadCollision()
         addChild(playerSprite)
     }
 

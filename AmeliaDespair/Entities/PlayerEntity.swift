@@ -13,6 +13,7 @@ class PlayerEntity: GKEntity {
         super.init()
         self.addComponent(AnimatedSpriteComponent())
         self.addComponent(MoveComponent())
+        self.addComponent(ColisionComponent())
     }
 
     required init?(coder: NSCoder) {
