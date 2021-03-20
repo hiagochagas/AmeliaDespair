@@ -7,26 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5716258826057ABE00477D9E /* AmeliaBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5716258726057ABE00477D9E /* AmeliaBackground.jpg */; };
+		5716258C260583DC00477D9E /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5716258B260583DC00477D9E /* BackgroundEntity.swift */; };
+		571625932605891B00477D9E /* DrawingPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571625922605891B00477D9E /* DrawingPlane.swift */; };
 		5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */; };
 		5721ECDC2600DC7D00A7071C /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECDB2600DC7D00A7071C /* PlayerEntity.swift */; };
 		5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */; };
 		5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE12600DCD100A7071C /* CrackedHeadEntity.swift */; };
 		5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */; };
-		5721ECE82600DD3500A7071C /* MoveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE72600DD3500A7071C /* MoveComponent.swift */; };
+		5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE72600DD3500A7071C /* MovementComponent.swift */; };
 		5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */; };
-		5721ECEE2600DDB200A7071C /* AtlasPlaceholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECED2600DDB200A7071C /* AtlasPlaceholder */; };
 		5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECF02600DDD200A7071C /* AudioPlaceholder */; };
 		5721ECF42600DDFC00A7071C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF32600DDFC00A7071C /* MainMenuView.swift */; };
 		5721ECF72600DE4E00A7071C /* PlayerStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF62600DE4E00A7071C /* PlayerStateMachine.swift */; };
 		5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF92600EA8100A7071C /* AnalogJoystick.swift */; };
 		5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BF252600D3F50032D010 /* SceneDelegate.swift */; };
 		578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F26DE2602477700B421E4 /* MoveComponentTests.swift */; };
+		57BD17F8260598970026388B /* Amelia.png in Resources */ = {isa = PBXBuildFile; fileRef = 57BD17F7260598970026388B /* Amelia.png */; };
 		6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */; };
 		6EF9A8AF25FFA3BF007A751D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8AE25FFA3BF007A751D /* GameScene.swift */; };
 		6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B025FFA3BF007A751D /* GameViewController.swift */; };
 		6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B525FFA3C0007A751D /* Assets.xcassets */; };
-		6EFDEC592603765600B21561 /* ColisionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDEC582603765600B21561 /* ColisionComponent.swift */; };
-		6EFDEC5D2603822000B21561 /* ColisionComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDEC5C2603822000B21561 /* ColisionComponentTests.swift */; };
+		6EFDEC592603765600B21561 /* CollisionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDEC582603765600B21561 /* CollisionComponent.swift */; };
+		6EFDEC5D2603822000B21561 /* CollisionComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDEC5C2603822000B21561 /* CollisionComponentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5716258726057ABE00477D9E /* AmeliaBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AmeliaBackground.jpg; sourceTree = "<group>"; };
+		5716258B260583DC00477D9E /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
+		571625922605891B00477D9E /* DrawingPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPlane.swift; sourceTree = "<group>"; };
 		5721ECD72600DBB700A7071C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5721ECDB2600DC7D00A7071C /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongHandsEntity.swift; sourceTree = "<group>"; };
 		5721ECE12600DCD100A7071C /* CrackedHeadEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrackedHeadEntity.swift; sourceTree = "<group>"; };
 		5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendlyNPCEntity.swift; sourceTree = "<group>"; };
-		5721ECE72600DD3500A7071C /* MoveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponent.swift; sourceTree = "<group>"; };
+		5721ECE72600DD3500A7071C /* MovementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
 		5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSpriteComponent.swift; sourceTree = "<group>"; };
-		5721ECED2600DDB200A7071C /* AtlasPlaceholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = AtlasPlaceholder; sourceTree = "<group>"; };
 		5721ECF02600DDD200A7071C /* AudioPlaceholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = AudioPlaceholder; sourceTree = "<group>"; };
 		5721ECF32600DDFC00A7071C /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		5721ECF62600DE4E00A7071C /* PlayerStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStateMachine.swift; sourceTree = "<group>"; };
@@ -56,14 +61,15 @@
 		578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmeliaDespairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F26DE2602477700B421E4 /* MoveComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentTests.swift; sourceTree = "<group>"; };
 		578F26E02602477700B421E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57BD17F7260598970026388B /* Amelia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amelia.png; sourceTree = "<group>"; };
 		6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeliaDespair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EF9A8AE25FFA3BF007A751D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6EF9A8B025FFA3BF007A751D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6EF9A8B525FFA3C0007A751D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EF9A8B725FFA3C0007A751D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EFDEC582603765600B21561 /* ColisionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColisionComponent.swift; sourceTree = "<group>"; };
-		6EFDEC5C2603822000B21561 /* ColisionComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColisionComponentTests.swift; sourceTree = "<group>"; };
+		6EFDEC582603765600B21561 /* CollisionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionComponent.swift; sourceTree = "<group>"; };
+		6EFDEC5C2603822000B21561 /* CollisionComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionComponentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5716258426057A5A00477D9E /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5716258726057ABE00477D9E /* AmeliaBackground.jpg */,
+				57BD17F7260598970026388B /* Amelia.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		57162591260588CD00477D9E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				571625922605891B00477D9E /* DrawingPlane.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		5721ECD02600DAF900A7071C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +122,7 @@
 				5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */,
 				5721ECE12600DCD100A7071C /* CrackedHeadEntity.swift */,
 				5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */,
+				5716258B260583DC00477D9E /* BackgroundEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -106,9 +130,9 @@
 		5751BF1D2600D2B10032D010 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5721ECE72600DD3500A7071C /* MoveComponent.swift */,
+				5721ECE72600DD3500A7071C /* MovementComponent.swift */,
 				5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */,
-				6EFDEC582603765600B21561 /* ColisionComponent.swift */,
+				6EFDEC582603765600B21561 /* CollisionComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -121,19 +145,11 @@
 			path = "State Machines";
 			sourceTree = "<group>";
 		};
-		5751BF1F2600D30B0032D010 /* Atlas */ = {
-			isa = PBXGroup;
-			children = (
-				5721ECED2600DDB200A7071C /* AtlasPlaceholder */,
-			);
-			path = Atlas;
-			sourceTree = "<group>";
-		};
 		5751BF202600D3380032D010 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				5751BF212600D3430032D010 /* Audio */,
-				5751BF1F2600D30B0032D010 /* Atlas */,
+				5716258426057A5A00477D9E /* Image */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -175,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				578F26DE2602477700B421E4 /* MoveComponentTests.swift */,
+				6EFDEC5C2603822000B21561 /* CollisionComponentTests.swift */,
 				578F26E02602477700B421E4 /* Info.plist */,
-				6EFDEC5C2603822000B21561 /* ColisionComponentTests.swift */,
 			);
 			path = AmeliaDespairTests;
 			sourceTree = "<group>";
@@ -202,6 +218,7 @@
 		6EF9A8A725FFA3BF007A751D /* AmeliaDespair */ = {
 			isa = PBXGroup;
 			children = (
+				57162591260588CD00477D9E /* Enums */,
 				5751BF1C2600D2AB0032D010 /* Entities */,
 				5751BF1D2600D2B10032D010 /* Components */,
 				5751BF242600D3CA0032D010 /* Shared */,
@@ -306,8 +323,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5721ECEE2600DDB200A7071C /* AtlasPlaceholder in Resources */,
+				5716258826057ABE00477D9E /* AmeliaBackground.jpg in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
+				57BD17F8260598970026388B /* Amelia.png in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
 			);
@@ -341,7 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */,
-				6EFDEC5D2603822000B21561 /* ColisionComponentTests.swift in Sources */,
+				6EFDEC5D2603822000B21561 /* CollisionComponentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,18 +368,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5721ECDC2600DC7D00A7071C /* PlayerEntity.swift in Sources */,
-				6EFDEC592603765600B21561 /* ColisionComponent.swift in Sources */,
+				6EFDEC592603765600B21561 /* CollisionComponent.swift in Sources */,
 				5721ECF42600DDFC00A7071C /* MainMenuView.swift in Sources */,
 				6EF9A8AF25FFA3BF007A751D /* GameScene.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
+				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,
 				5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */,
 				6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */,
 				5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */,
 				5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */,
 				5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */,
 				5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */,
-				5721ECE82600DD3500A7071C /* MoveComponent.swift in Sources */,
+				5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */,
 				5721ECF72600DE4E00A7071C /* PlayerStateMachine.swift in Sources */,
+				5716258C260583DC00477D9E /* BackgroundEntity.swift in Sources */,
 				5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

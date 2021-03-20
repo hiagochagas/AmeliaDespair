@@ -1,5 +1,5 @@
 //
-//  PlayerEntity.swift
+//  MovementComponent.swift
 //  AmeliaDespair
 //
 //  Created by Rodrigo Matos Aguiar on 16/03/21.
@@ -7,7 +7,7 @@
 
 import GameplayKit
 
-class MoveComponent: GKComponent {
+class MovementComponent: GKComponent {
     var velocity: CGPoint?
     let velocityMultiplier: CGFloat = 0.1
 

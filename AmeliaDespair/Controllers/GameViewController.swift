@@ -38,8 +38,10 @@ class GameViewController: UIViewController {
         scene.anchorPoint = CGPoint(x: 0, y: 0)
         gameSceneView.presentScene(scene)
         gameSceneView.ignoresSiblingOrder = true
-        gameSceneView.showsFPS = true
-        gameSceneView.showsNodeCount = true
+        // Debugging booleans
+//        gameSceneView.showsFPS = true
+//        gameSceneView.showsNodeCount = true
+//        gameSceneView.showsPhysics = true
     }
 
     override var shouldAutorotate: Bool {

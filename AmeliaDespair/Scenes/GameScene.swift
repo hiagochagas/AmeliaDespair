@@ -12,6 +12,7 @@ class GameScene: SKScene {
 
     // TODO: Adjust joystick for different devices (screen sizes)
     let player = PlayerEntity()
+    let background = BackgroundEntity()
 
     private var previousUpdateTime: TimeInterval = TimeInterval()
 
@@ -23,8 +24,8 @@ class GameScene: SKScene {
         return joystick
     }()
 
-    var playerMoveComponent: MoveComponent? {
-        player.component(ofType: MoveComponent.self)
+    var playerMoveComponent: MovementComponent? {
+        player.component(ofType: MovementComponent.self)
     }
 
     var playerAnimatedSpriteComponent: AnimatedSpriteComponent? {
@@ -40,12 +41,12 @@ class GameScene: SKScene {
         setupCamera()
         setupPlayerSprite()
         setupJoystick()
+        setupBackground()
 //        Wall to test the collision
 //        let wall = SKShapeNode(rect: CGRect(x: 400, y: 500, width: 50, height: 100))
 //        addChild(wall)
 //        wall.physicsBody = SKPhysicsBody(edgeLoopFrom: wall.frame)
 //        wall.physicsBody?.affectedByGravity = false
-
     }
 
     func setupCamera() {
@@ -57,8 +58,9 @@ class GameScene: SKScene {
         guard let playerSprite = playerAnimatedSpriteComponent?.spriteNode else {
             return
         }
+        player.component(ofType: CollisionComponent.self)?.loadCollision()
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
-        player.component(ofType: ColisionComponent.self)?.loadCollision()
+        playerSprite.setScale(0.2)
         addChild(playerSprite)
     }
 
@@ -69,11 +71,22 @@ class GameScene: SKScene {
         joystick.position = convert(joystick.position, to: sceneCamera)
         sceneCamera.addChild(joystick)
         joystick.on(.move) { (movingJoystick) in
-            self.playerMoveComponent?.velocity = movingJoystick.velocity
+            self.playerMoveComponent?.velocity = CGPoint(x: movingJoystick.velocity.x / 2, y: movingJoystick.velocity.y / 2)
         }
         joystick.on(.end) { _ in
             self.playerMoveComponent?.velocity = CGPoint(x: 0, y: 0)
         }
+    }
+
+    func setupBackground() {
+        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
+            return
+        }
+        background.component(ofType: CollisionComponent.self)?.loadCollision(shape: .edgeLoop)
+        backgroundSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
+        backgroundSprite.zPosition = DrawingPlane.background.rawValue
+        backgroundSprite.setScale(0.5)
+        addChild(backgroundSprite)
     }
 
     override func update(_ currentTime: TimeInterval) {
