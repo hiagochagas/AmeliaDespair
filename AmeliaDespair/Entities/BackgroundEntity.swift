@@ -1,18 +1,17 @@
 //
-//  PlayerEntity.swift
+//  BackgroundEntity.swift
 //  AmeliaDespair
 //
-//  Created by Rodrigo Matos Aguiar on 16/03/21.
+//  Created by Rodrigo Matos Aguiar on 19/03/21.
 //
 
 import GameplayKit
 
-class PlayerEntity: GKEntity {
+class BackgroundEntity: GKEntity {
 
     override init() {
         super.init()
-        self.addComponent(AnimatedSpriteComponent(imageName: "Amelia"))
-        self.addComponent(MovementComponent())
+        self.addComponent(AnimatedSpriteComponent(imageName: "AmeliaBackground.jpg"))
         self.addComponent(CollisionComponent())
     }
 
