@@ -20,6 +20,10 @@
 		5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECF02600DDD200A7071C /* AudioPlaceholder */; };
 		5721ECF42600DDFC00A7071C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF32600DDFC00A7071C /* MainMenuView.swift */; };
 		5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF92600EA8100A7071C /* AnalogJoystick.swift */; };
+		572E3818260A303900A2FFD1 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E3817260A303900A2FFD1 /* MainMenuViewController.swift */; };
+		572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */; };
+		572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */; };
+		572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E3826260A34E100A2FFD1 /* UIColorExtension.swift */; };
 		5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BF252600D3F50032D010 /* SceneDelegate.swift */; };
 		57531ACB26091C12005EEA5F /* IdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57531ACA26091C12005EEA5F /* IdleState.swift */; };
 		57531ACF26091C46005EEA5F /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57531ACE26091C46005EEA5F /* Direction.swift */; };
@@ -65,6 +69,10 @@
 		5721ECF02600DDD200A7071C /* AudioPlaceholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = AudioPlaceholder; sourceTree = "<group>"; };
 		5721ECF32600DDFC00A7071C /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		5721ECF92600EA8100A7071C /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
+		572E3817260A303900A2FFD1 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gruppo-Regular.ttf"; sourceTree = "<group>"; };
+		572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		572E3826260A34E100A2FFD1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5751BF252600D3F50032D010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57531ACA26091C12005EEA5F /* IdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleState.swift; sourceTree = "<group>"; };
 		57531ACE26091C46005EEA5F /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -134,8 +142,18 @@
 			isa = PBXGroup;
 			children = (
 				6EF9A8B025FFA3BF007A751D /* GameViewController.swift */,
+				572E3817260A303900A2FFD1 /* MainMenuViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		572E381B260A320000A2FFD1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */,
+				572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5751BF1C2600D2AB0032D010 /* Entities */ = {
@@ -167,6 +185,7 @@
 			children = (
 				5751BF212600D3430032D010 /* Audio */,
 				5716258426057A5A00477D9E /* Image */,
+				572E381B260A320000A2FFD1 /* Fonts */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -227,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */,
+				572E3826260A34E100A2FFD1 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,11 +378,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */,
 				5716258826057ABE00477D9E /* AmeliaBackground.jpg in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
 				57BD17F8260598970026388B /* Amelia.png in Resources */,
 				575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */,
 				575E10892608CB87000F414E /* ActionButton.png in Resources */,
+				572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
@@ -416,6 +438,8 @@
 				57CAD839260A14C100B5FACC /* PlayerAtlasName.swift in Sources */,
 				575E10BD2608E4A9000F414E /* WalkState.swift in Sources */,
 				6EF9A8AF25FFA3BF007A751D /* GameScene.swift in Sources */,
+				572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */,
+				572E3818260A303900A2FFD1 /* MainMenuViewController.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
 				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,
 				5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */,
