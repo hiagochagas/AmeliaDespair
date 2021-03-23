@@ -11,9 +11,10 @@ class PlayerEntity: GKEntity {
 
     override init() {
         super.init()
-        self.addComponent(AnimatedSpriteComponent(imageName: "Amelia"))
+        self.addComponent(AnimatedSpriteComponent(atlasName: "PlayerWalkDown"))
         self.addComponent(MovementComponent())
         self.addComponent(CollisionComponent())
+        self.addComponent(PlayerControlComponent(states: [IdleState(self), WalkState(self)]))
     }
 
     required init?(coder: NSCoder) {
