@@ -8,7 +8,7 @@
 import GameplayKit
 
 class MovementComponent: GKComponent {
-    var velocity: CGPoint?
+    var velocity = CGPoint(x: 0, y: 0)
     let velocityMultiplier: CGFloat = 0.1
 
     var spriteNode: SKSpriteNode? {
@@ -16,15 +16,8 @@ class MovementComponent: GKComponent {
     }
 
     func move() {
-        if let velocity = velocity {
-            spriteNode?.position.x += velocity.x * velocityMultiplier
-            spriteNode?.position.y += velocity.y * velocityMultiplier
-        }
-    }
-
-    override func update(deltaTime seconds: TimeInterval) {
-        super.update(deltaTime: seconds)
-        move()
+        spriteNode?.position.x += velocity.x * velocityMultiplier
+        spriteNode?.position.y += velocity.y * velocityMultiplier
     }
 
 }

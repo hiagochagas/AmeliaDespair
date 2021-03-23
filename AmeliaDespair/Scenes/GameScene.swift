@@ -32,6 +32,10 @@ class GameScene: SKScene {
         player.component(ofType: AnimatedSpriteComponent.self)
     }
 
+    var playerControlComponent: PlayerControlComponent? {
+        player.component(ofType: PlayerControlComponent.self)
+    }
+
     var sceneCamera: SKCameraNode = {
         let camera = SKCameraNode()
         return camera
@@ -71,11 +75,20 @@ class GameScene: SKScene {
         joystick.position = convert(joystick.position, to: sceneCamera)
         sceneCamera.addChild(joystick)
         joystick.on(.move) { (movingJoystick) in
-            self.playerMoveComponent?.velocity = CGPoint(x: movingJoystick.velocity.x / 2, y: movingJoystick.velocity.y / 2)
+            let velocity = CGPoint(x: movingJoystick.velocity.x / 2, y: movingJoystick.velocity.y / 2)
+            self.playerMoveComponent?.velocity = velocity
+            if velocity != CGPoint.zero {
+                self.playerControlComponent?.stateMachine.enterIfNeeded(WalkState.self)
+            }
         }
         joystick.on(.end) { _ in
-            self.playerMoveComponent?.velocity = CGPoint(x: 0, y: 0)
+            self.playerMoveComponent?.velocity = CGPoint.zero
+            self.playerControlComponent?.stateMachine.enterIfNeeded(IdleState.self)
         }
+    }
+
+    func setupActionButton() {
+
     }
 
     func setupBackground() {
@@ -94,7 +107,7 @@ class GameScene: SKScene {
             sceneCamera.position = spritePosition
         }
         let timeSincePreviousUpdate = currentTime - previousUpdateTime
-        playerMoveComponent?.update(deltaTime: timeSincePreviousUpdate)
+        playerControlComponent?.update(deltaTime: timeSincePreviousUpdate)
         previousUpdateTime = currentTime
     }
 
