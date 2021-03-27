@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
             gameSceneView.topAnchor.constraint(equalTo: view.topAnchor),
             gameSceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        let scene = GameScene(size: view.bounds.size)
+        let scene = MenuScene(size: view.bounds.size)
         scene.scaleMode = .aspectFit
         scene.anchorPoint = CGPoint(x: 0, y: 0)
         gameSceneView.presentScene(scene)

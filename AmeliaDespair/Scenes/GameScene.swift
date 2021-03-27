@@ -2,39 +2,25 @@
 //  GameScene.swift
 //  AmeliaDespair
 //
-//  Created by Hiago Chagas on 15/03/21.
+//  Created by Rodrigo Matos Aguiar on 24/03/21.
 //
 
 import SpriteKit
-import GameplayKit
 
 class GameScene: SKScene {
 
-    // TODO: Adjust joystick for different devices (screen sizes)
-    let player = PlayerEntity()
-    let background = BackgroundEntity()
-
-    private var previousUpdateTime: TimeInterval = TimeInterval()
-
-    let joystick: TLAnalogJoystick = {
-        let diameter: CGFloat = 100
-        let joystick = TLAnalogJoystick(withDiameter: diameter)
-        joystick.position = CGPoint(x: diameter / 2 + 50, y: diameter / 2 + 20)
-        joystick.handleColor = .white
-        return joystick
+    var gameNode: GameNode!
+    var pauseNode: PauseNode!
+    var blurNode: SKEffectNode = {
+        let effectNode = SKEffectNode()
+        let blur = CIFilter(name: "CIGaussianBlur", parameters: ["inputRadius": 10.0])
+        effectNode.filter = blur
+        effectNode.shouldRasterize = true
+        effectNode.shouldEnableEffects = true
+        return effectNode
     }()
 
-    var playerMoveComponent: MovementComponent? {
-        player.component(ofType: MovementComponent.self)
-    }
-
-    var playerAnimatedSpriteComponent: AnimatedSpriteComponent? {
-        player.component(ofType: AnimatedSpriteComponent.self)
-    }
-
-    var playerControlComponent: PlayerControlComponent? {
-        player.component(ofType: PlayerControlComponent.self)
-    }
+    private var previousUpdateTime: TimeInterval = TimeInterval()
 
     var sceneCamera: SKCameraNode = {
         let camera = SKCameraNode()
@@ -43,14 +29,15 @@ class GameScene: SKScene {
 
     override func didMove(to view: SKView) {
         setupCamera()
-        setupPlayerSprite()
-        setupJoystick()
-        setupBackground()
-//        Wall to test the collision
-//        let wall = SKShapeNode(rect: CGRect(x: 400, y: 500, width: 50, height: 100))
-//        addChild(wall)
-//        wall.physicsBody = SKPhysicsBody(edgeLoopFrom: wall.frame)
-//        wall.physicsBody?.affectedByGravity = false
+        setupGameNode()
+        setupPauseNode()
+        setupBlurNode()
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        let timeSincePreviousUpdate = currentTime - previousUpdateTime
+        gameNode.update(timeSincePreviousUpdate)
+        previousUpdateTime = currentTime
     }
 
     func setupCamera() {
@@ -58,57 +45,66 @@ class GameScene: SKScene {
         addChild(sceneCamera)
     }
 
-    func setupPlayerSprite() {
-        guard let playerSprite = playerAnimatedSpriteComponent?.spriteNode else {
-            return
-        }
-        player.component(ofType: CollisionComponent.self)?.loadCollision()
-        playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
-        playerSprite.setScale(0.2)
-        addChild(playerSprite)
+    func setupGameNode() {
+        gameNode = GameNode(camera: sceneCamera)
+        gameNode.gameScene = self
+        addChild(gameNode)
     }
 
-    func setupJoystick() {
-        if let spritePosition = playerAnimatedSpriteComponent?.spriteNode.position {
-            sceneCamera.position = spritePosition
-        }
-        joystick.position = convert(joystick.position, to: sceneCamera)
-        sceneCamera.addChild(joystick)
-        joystick.on(.move) { (movingJoystick) in
-            let velocity = CGPoint(x: movingJoystick.velocity.x / 2, y: movingJoystick.velocity.y / 2)
-            self.playerMoveComponent?.velocity = velocity
-            if velocity != CGPoint.zero {
-                self.playerControlComponent?.stateMachine.enterIfNeeded(WalkState.self)
-            }
-        }
-        joystick.on(.end) { _ in
-            self.playerMoveComponent?.velocity = CGPoint.zero
-            self.playerControlComponent?.stateMachine.enterIfNeeded(IdleState.self)
-        }
+    func setupPauseNode() {
+        pauseNode = PauseNode(gameScene: self)
+        addChild(pauseNode)
+        pauseNode.isHidden = true
+        pauseNode.zPosition = DrawingPlane.foreground.rawValue
     }
 
-    func setupActionButton() {
-
+    func setupBlurNode() {
+        addChild(blurNode)
     }
 
-    func setupBackground() {
-        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
-            return
+    func addImageToBlurNode() {
+        guard let view = view else { return }
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        if let image = image {
+            let node = SKSpriteNode(texture: SKTexture(image: image))
+            blurNode.addChild(node)
         }
-        background.component(ofType: CollisionComponent.self)?.loadCollision(shape: .edgeLoop)
-        backgroundSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
-        backgroundSprite.zPosition = DrawingPlane.background.rawValue
-        backgroundSprite.setScale(0.5)
-        addChild(backgroundSprite)
+        blurNode.position = gameNode.sceneCamera.position
     }
 
-    override func update(_ currentTime: TimeInterval) {
-        if let spritePosition = playerAnimatedSpriteComponent?.spriteNode.position {
-            sceneCamera.position = spritePosition
-        }
-        let timeSincePreviousUpdate = currentTime - previousUpdateTime
-        playerControlComponent?.update(deltaTime: timeSincePreviousUpdate)
-        previousUpdateTime = currentTime
+    func returnToMainMenu() {
+        let menuScene = MenuScene(size: self.size)
+        let transition = SKTransition.fade(withDuration: 0.5)
+        self.view?.presentScene(menuScene, transition: transition)
     }
 
+    func pauseGame() {
+        pauseNode.position = gameNode.sceneCamera.position
+        pauseNode.isHidden = false
+        gameNode.isPaused = true
+        gameNode.joystick.isUserInteractionEnabled = false
+        gameNode.pauseButton.isUserInteractionEnabled = false
+
+        blurNode.isHidden = false
+        gameNode.isHidden = true
+        gameNode.pauseButton.isHidden = true
+        gameNode.joystick.isHidden = true
+        addImageToBlurNode()
+    }
+
+    func unpauseGame() {
+        pauseNode.isHidden = true
+        gameNode.isPaused = false
+        gameNode.joystick.isUserInteractionEnabled = true
+        gameNode.pauseButton.isUserInteractionEnabled = true
+
+        blurNode.isHidden = true
+        blurNode.removeAllChildren()
+        gameNode.isHidden = false
+        gameNode.pauseButton.isHidden = false
+        gameNode.joystick.isHidden = false
+    }
 }
