@@ -26,5 +26,6 @@ class IdleState: GKState {
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
         animatedSpriteComponent?.spriteNode.removeAllActions()
+        animatedSpriteComponent?.spriteNode.run(SKAction.setTexture((animatedSpriteComponent?.animationTextures.first)!, resize: true))
     }
 }
