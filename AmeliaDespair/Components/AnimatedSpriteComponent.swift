@@ -47,8 +47,8 @@ class AnimatedSpriteComponent: GKComponent {
                 SKAction.repeatForever(
                     SKAction.animate(
                         with: animationTextures,
-                        timePerFrame: 0.1,
-                        resize: false,
+                        timePerFrame: 0.15,
+                        resize: true,
                         restore: true
                     )
                 ),

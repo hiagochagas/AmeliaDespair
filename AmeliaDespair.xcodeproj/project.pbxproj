@@ -30,6 +30,8 @@
 		575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */; };
 		575E10BD2608E4A9000F414E /* WalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10BC2608E4A9000F414E /* WalkState.swift */; };
 		575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10C42608E7C5000F414E /* PlayerControlComponent.swift */; };
+		578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */; };
+		578AD3432610103000CCEA5F /* PlayerWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */; };
 		578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F26DE2602477700B421E4 /* MoveComponentTests.swift */; };
 		57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926710260B6C5100FFB0E4 /* ImageButton.swift */; };
 		5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5792672C260B7B0700FFB0E4 /* PauseIcon.png */; };
@@ -83,6 +85,8 @@
 		575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkDown.atlas; sourceTree = "<group>"; };
 		575E10BC2608E4A9000F414E /* WalkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkState.swift; sourceTree = "<group>"; };
 		575E10C42608E7C5000F414E /* PlayerControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlComponent.swift; sourceTree = "<group>"; };
+		578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkLeft.atlas; sourceTree = "<group>"; };
+		578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkRight.atlas; sourceTree = "<group>"; };
 		578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmeliaDespairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F26DE2602477700B421E4 /* MoveComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentTests.swift; sourceTree = "<group>"; };
 		578F26E02602477700B421E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,12 +131,14 @@
 		5716258426057A5A00477D9E /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				5792672C260B7B0700FFB0E4 /* PauseIcon.png */,
 				57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */,
 				575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */,
+				578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */,
+				578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */,
 				5716258726057ABE00477D9E /* AmeliaBackground.jpg */,
 				57BD17F7260598970026388B /* Amelia.png */,
 				575E10882608CB87000F414E /* ActionButton.png */,
+				5792672C260B7B0700FFB0E4 /* PauseIcon.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */,
+				578AD3432610103000CCEA5F /* PlayerWalkRight.atlas in Resources */,
 				5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */,
 				5716258826057ABE00477D9E /* AmeliaBackground.jpg in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
@@ -400,6 +407,7 @@
 				572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */,
+				578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

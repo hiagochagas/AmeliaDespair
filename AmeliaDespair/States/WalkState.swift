@@ -47,13 +47,13 @@ class WalkState: GKState {
             animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkUp.rawValue)
         case .down:
             animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkDown.rawValue)
-//        case .left:
-//            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkLeft.rawValue)
-//        case .right:
-//            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkRight.rawValue)
+        case .left:
+            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkLeft.rawValue)
+        case .right:
+            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkRight.rawValue)
         // Temp default (for testing)
-        default:
-            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkDown.rawValue)
+//        default:
+//            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkDown.rawValue)
         }
     }
 
