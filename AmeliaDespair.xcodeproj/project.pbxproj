@@ -18,8 +18,10 @@
 		5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECE72600DD3500A7071C /* MovementComponent.swift */; };
 		5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */; };
 		5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECF02600DDD200A7071C /* AudioPlaceholder */; };
-		5721ECF42600DDFC00A7071C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF32600DDFC00A7071C /* MainMenuView.swift */; };
 		5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECF92600EA8100A7071C /* AnalogJoystick.swift */; };
+		572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */; };
+		572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */; };
+		572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E3826260A34E100A2FFD1 /* UIColorExtension.swift */; };
 		5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BF252600D3F50032D010 /* SceneDelegate.swift */; };
 		57531ACB26091C12005EEA5F /* IdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57531ACA26091C12005EEA5F /* IdleState.swift */; };
 		57531ACF26091C46005EEA5F /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57531ACE26091C46005EEA5F /* Direction.swift */; };
@@ -29,12 +31,18 @@
 		575E10BD2608E4A9000F414E /* WalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10BC2608E4A9000F414E /* WalkState.swift */; };
 		575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10C42608E7C5000F414E /* PlayerControlComponent.swift */; };
 		578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F26DE2602477700B421E4 /* MoveComponentTests.swift */; };
+		57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926710260B6C5100FFB0E4 /* ImageButton.swift */; };
+		5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5792672C260B7B0700FFB0E4 /* PauseIcon.png */; };
+		57926739260B7FF200FFB0E4 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926738260B7FF200FFB0E4 /* PauseNode.swift */; };
+		57926741260B840600FFB0E4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926740260B840600FFB0E4 /* GameScene.swift */; };
+		5796D4AE260F482200D353F5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796D4AD260F482200D353F5 /* MenuScene.swift */; };
+		57BC6C4B260E267A00180822 /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC6C4A260E267A00180822 /* LabelButton.swift */; };
 		57BD17F8260598970026388B /* Amelia.png in Resources */ = {isa = PBXBuildFile; fileRef = 57BD17F7260598970026388B /* Amelia.png */; };
 		57CAD839260A14C100B5FACC /* PlayerAtlasName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */; };
 		57CAD840260A1BC200B5FACC /* GKStateMachineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */; };
 		57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */; };
 		6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */; };
-		6EF9A8AF25FFA3BF007A751D /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8AE25FFA3BF007A751D /* GameScene.swift */; };
+		6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8AE25FFA3BF007A751D /* GameNode.swift */; };
 		6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B025FFA3BF007A751D /* GameViewController.swift */; };
 		6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B525FFA3C0007A751D /* Assets.xcassets */; };
 		6EFDEC592603765600B21561 /* CollisionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFDEC582603765600B21561 /* CollisionComponent.swift */; };
@@ -63,8 +71,10 @@
 		5721ECE72600DD3500A7071C /* MovementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
 		5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSpriteComponent.swift; sourceTree = "<group>"; };
 		5721ECF02600DDD200A7071C /* AudioPlaceholder */ = {isa = PBXFileReference; lastKnownFileType = text; path = AudioPlaceholder; sourceTree = "<group>"; };
-		5721ECF32600DDFC00A7071C /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		5721ECF92600EA8100A7071C /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
+		572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gruppo-Regular.ttf"; sourceTree = "<group>"; };
+		572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		572E3826260A34E100A2FFD1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		5751BF252600D3F50032D010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57531ACA26091C12005EEA5F /* IdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleState.swift; sourceTree = "<group>"; };
 		57531ACE26091C46005EEA5F /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -76,13 +86,19 @@
 		578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmeliaDespairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F26DE2602477700B421E4 /* MoveComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentTests.swift; sourceTree = "<group>"; };
 		578F26E02602477700B421E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57926710260B6C5100FFB0E4 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		5792672C260B7B0700FFB0E4 /* PauseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseIcon.png; sourceTree = "<group>"; };
+		57926738260B7FF200FFB0E4 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
+		57926740260B840600FFB0E4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5796D4AD260F482200D353F5 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		57BC6C4A260E267A00180822 /* LabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButton.swift; sourceTree = "<group>"; };
 		57BD17F7260598970026388B /* Amelia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amelia.png; sourceTree = "<group>"; };
 		57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAtlasName.swift; sourceTree = "<group>"; };
 		57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKStateMachineExtension.swift; sourceTree = "<group>"; };
 		57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkUp.atlas; sourceTree = "<group>"; };
 		6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeliaDespair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6EF9A8AE25FFA3BF007A751D /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		6EF9A8AE25FFA3BF007A751D /* GameNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNode.swift; sourceTree = "<group>"; };
 		6EF9A8B025FFA3BF007A751D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6EF9A8B525FFA3C0007A751D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EF9A8B725FFA3C0007A751D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +127,7 @@
 		5716258426057A5A00477D9E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				5792672C260B7B0700FFB0E4 /* PauseIcon.png */,
 				57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */,
 				575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */,
 				5716258726057ABE00477D9E /* AmeliaBackground.jpg */,
@@ -136,6 +153,15 @@
 				6EF9A8B025FFA3BF007A751D /* GameViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		572E381B260A320000A2FFD1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */,
+				572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5751BF1C2600D2AB0032D010 /* Entities */ = {
@@ -167,6 +193,7 @@
 			children = (
 				5751BF212600D3430032D010 /* Audio */,
 				5716258426057A5A00477D9E /* Image */,
+				572E381B260A320000A2FFD1 /* Fonts */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -182,17 +209,10 @@
 		5751BF222600D3630032D010 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6EF9A8AE25FFA3BF007A751D /* GameScene.swift */,
+				57926740260B840600FFB0E4 /* GameScene.swift */,
+				5796D4AD260F482200D353F5 /* MenuScene.swift */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		5751BF232600D3670032D010 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5721ECF32600DDFC00A7071C /* MainMenuView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		5751BF242600D3CA0032D010 /* Shared */ = {
@@ -223,10 +243,22 @@
 			path = AmeliaDespairTests;
 			sourceTree = "<group>";
 		};
+		5792670F260B6BFF00FFB0E4 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				57926710260B6C5100FFB0E4 /* ImageButton.swift */,
+				57BC6C4A260E267A00180822 /* LabelButton.swift */,
+				6EF9A8AE25FFA3BF007A751D /* GameNode.swift */,
+				57926738260B7FF200FFB0E4 /* PauseNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		57CAD83E260A1BAC00B5FACC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */,
+				572E3826260A34E100A2FFD1 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,9 +289,9 @@
 				5751BF1C2600D2AB0032D010 /* Entities */,
 				5751BF1D2600D2B10032D010 /* Components */,
 				5751BF242600D3CA0032D010 /* Shared */,
-				5751BF232600D3670032D010 /* Views */,
 				5721ECD02600DAF900A7071C /* Controllers */,
 				5751BF222600D3630032D010 /* Scenes */,
+				5792670F260B6BFF00FFB0E4 /* Nodes */,
 				5751BF202600D3380032D010 /* Assets */,
 				575E10BB2608E420000F414E /* States */,
 				5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */,
@@ -358,11 +390,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */,
+				5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */,
 				5716258826057ABE00477D9E /* AmeliaBackground.jpg in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
 				57BD17F8260598970026388B /* Amelia.png in Resources */,
 				575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */,
 				575E10892608CB87000F414E /* ActionButton.png in Resources */,
+				572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
@@ -406,19 +441,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				57531ACB26091C12005EEA5F /* IdleState.swift in Sources */,
+				5796D4AE260F482200D353F5 /* MenuScene.swift in Sources */,
 				57CAD840260A1BC200B5FACC /* GKStateMachineExtension.swift in Sources */,
 				5721ECDC2600DC7D00A7071C /* PlayerEntity.swift in Sources */,
+				57926741260B840600FFB0E4 /* GameScene.swift in Sources */,
+				57BC6C4B260E267A00180822 /* LabelButton.swift in Sources */,
 				6EFDEC592603765600B21561 /* CollisionComponent.swift in Sources */,
 				57531ACF26091C46005EEA5F /* Direction.swift in Sources */,
 				575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */,
 				575E10852608C8E9000F414E /* AttackComponent.swift in Sources */,
-				5721ECF42600DDFC00A7071C /* MainMenuView.swift in Sources */,
 				57CAD839260A14C100B5FACC /* PlayerAtlasName.swift in Sources */,
 				575E10BD2608E4A9000F414E /* WalkState.swift in Sources */,
-				6EF9A8AF25FFA3BF007A751D /* GameScene.swift in Sources */,
+				6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */,
+				572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
 				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,
 				5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */,
+				57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */,
+				57926739260B7FF200FFB0E4 /* PauseNode.swift in Sources */,
 				6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */,
 				5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */,
 				5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */,
