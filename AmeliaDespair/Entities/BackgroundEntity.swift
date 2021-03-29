@@ -11,7 +11,7 @@ class BackgroundEntity: GKEntity {
 
     override init() {
         super.init()
-        self.addComponent(AnimatedSpriteComponent(imageName: "AmeliaBackground.jpg"))
+        self.addComponent(AnimatedSpriteComponent(imageName: "GameBackground"))
         self.addComponent(CollisionComponent())
     }
 
