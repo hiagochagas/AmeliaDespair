@@ -36,9 +36,10 @@ class WalkState: GKState {
 
     override func update(deltaTime seconds: TimeInterval) {
         super.update(deltaTime: seconds)
-        guard let velocity = movementComponent?.velocity else { return }
-        direction = directionFor(velocity: velocity)
-        movementComponent?.move()
+        guard let movementComponent = movementComponent else { return }
+        direction = directionFor(velocity: movementComponent.velocity)
+        movementComponent.move()
+        animatedSpriteComponent?.spriteNode.speed = CGFloat.clamp(sin(movementComponent.velocity.length * 0.05), 0.2, 1)
     }
 
     func setAnimation(forDirection direction: Direction) {
@@ -47,13 +48,13 @@ class WalkState: GKState {
             animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkUp.rawValue)
         case .down:
             animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkDown.rawValue)
-//        case .left:
-//            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkLeft.rawValue)
-//        case .right:
-//            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkRight.rawValue)
+        case .left:
+            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkLeft.rawValue)
+        case .right:
+            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkRight.rawValue)
         // Temp default (for testing)
-        default:
-            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkDown.rawValue)
+//        default:
+//            animatedSpriteComponent?.setAnimation(atlasName: PlayerAtlasName.walkDown.rawValue)
         }
     }
 
@@ -76,7 +77,7 @@ class WalkState: GKState {
             } else {
                 return .up
             }
-        } else if velocity.x < 0 && velocity.y < 0 {
+        } else if velocity.x < 5 && velocity.y < 5 {
             if abs(velocity.x) > abs(velocity.y) {
                 return .left
             } else {

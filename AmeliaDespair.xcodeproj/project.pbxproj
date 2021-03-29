@@ -30,6 +30,10 @@
 		575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */; };
 		575E10BD2608E4A9000F414E /* WalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10BC2608E4A9000F414E /* WalkState.swift */; };
 		575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10C42608E7C5000F414E /* PlayerControlComponent.swift */; };
+		578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */; };
+		578AD3432610103000CCEA5F /* PlayerWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */; };
+		578AD349261014E700CCEA5F /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578AD348261014E700CCEA5F /* CGPointExtension.swift */; };
+		578AD3622610296000CCEA5F /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578AD3612610296000CCEA5F /* CGFloatExtension.swift */; };
 		578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F26DE2602477700B421E4 /* MoveComponentTests.swift */; };
 		57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926710260B6C5100FFB0E4 /* ImageButton.swift */; };
 		5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5792672C260B7B0700FFB0E4 /* PauseIcon.png */; };
@@ -83,6 +87,10 @@
 		575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkDown.atlas; sourceTree = "<group>"; };
 		575E10BC2608E4A9000F414E /* WalkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkState.swift; sourceTree = "<group>"; };
 		575E10C42608E7C5000F414E /* PlayerControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlComponent.swift; sourceTree = "<group>"; };
+		578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkLeft.atlas; sourceTree = "<group>"; };
+		578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkRight.atlas; sourceTree = "<group>"; };
+		578AD348261014E700CCEA5F /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
+		578AD3612610296000CCEA5F /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmeliaDespairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F26DE2602477700B421E4 /* MoveComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentTests.swift; sourceTree = "<group>"; };
 		578F26E02602477700B421E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,12 +135,14 @@
 		5716258426057A5A00477D9E /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				5792672C260B7B0700FFB0E4 /* PauseIcon.png */,
 				57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */,
 				575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */,
+				578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */,
+				578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */,
 				5716258726057ABE00477D9E /* AmeliaBackground.jpg */,
 				57BD17F7260598970026388B /* Amelia.png */,
 				575E10882608CB87000F414E /* ActionButton.png */,
+				5792672C260B7B0700FFB0E4 /* PauseIcon.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -248,6 +258,7 @@
 			children = (
 				57926710260B6C5100FFB0E4 /* ImageButton.swift */,
 				57BC6C4A260E267A00180822 /* LabelButton.swift */,
+				5721ECF92600EA8100A7071C /* AnalogJoystick.swift */,
 				6EF9A8AE25FFA3BF007A751D /* GameNode.swift */,
 				57926738260B7FF200FFB0E4 /* PauseNode.swift */,
 			);
@@ -259,6 +270,8 @@
 			children = (
 				57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */,
 				572E3826260A34E100A2FFD1 /* UIColorExtension.swift */,
+				578AD348261014E700CCEA5F /* CGPointExtension.swift */,
+				578AD3612610296000CCEA5F /* CGFloatExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,7 +310,6 @@
 				5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */,
 				6EF9A8B525FFA3C0007A751D /* Assets.xcassets */,
 				6EF9A8B725FFA3C0007A751D /* Info.plist */,
-				5721ECF92600EA8100A7071C /* AnalogJoystick.swift */,
 			);
 			path = AmeliaDespair;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */,
+				578AD3432610103000CCEA5F /* PlayerWalkRight.atlas in Resources */,
 				5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */,
 				5716258826057ABE00477D9E /* AmeliaBackground.jpg in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
@@ -400,6 +413,7 @@
 				572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */,
+				578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +467,7 @@
 				57CAD839260A14C100B5FACC /* PlayerAtlasName.swift in Sources */,
 				575E10BD2608E4A9000F414E /* WalkState.swift in Sources */,
 				6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */,
+				578AD3622610296000CCEA5F /* CGFloatExtension.swift in Sources */,
 				572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
 				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,
@@ -464,6 +479,7 @@
 				5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */,
 				5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */,
 				5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */,
+				578AD349261014E700CCEA5F /* CGPointExtension.swift in Sources */,
 				5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */,
 				5716258C260583DC00477D9E /* BackgroundEntity.swift in Sources */,
 				5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */,
@@ -654,7 +670,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 828XYUZTZQ;
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -673,7 +689,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 828XYUZTZQ;
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
