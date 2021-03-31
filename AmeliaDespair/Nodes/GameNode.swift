@@ -10,7 +10,6 @@ import GameplayKit
 
 class GameNode: SKNode {
 
-    // TODO: Adjust joystick for different devices (screen sizes)
     let player = PlayerEntity()
     let background = BackgroundEntity()
     var parentViewController: GameViewController!
@@ -52,11 +51,6 @@ class GameNode: SKNode {
         setupJoystick()
         setupBackground()
         setupPauseButton()
-//        Wall to test the collision
-//        let wall = SKShapeNode(rect: CGRect(x: 400, y: 500, width: 50, height: 100))
-//        addChild(wall)
-//        wall.physicsBody = SKPhysicsBody(edgeLoopFrom: wall.frame)
-//        wall.physicsBody?.affectedByGravity = false
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -69,7 +63,7 @@ class GameNode: SKNode {
         }
         player.component(ofType: CollisionComponent.self)?.loadCollision()
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
-        playerSprite.setScale(0.2)
+        playerSprite.setScale(0.13)
         addChild(playerSprite)
     }
 
