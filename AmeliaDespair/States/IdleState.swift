@@ -18,6 +18,10 @@ class IdleState: GKState {
         self.entity.component(ofType: MovementComponent.self)
     }
 
+    var soundComponent: SoundComponent? {
+        self.entity.component(ofType: SoundComponent.self)
+    }
+
     init(_ entity: GKEntity) {
         self.entity = entity
         super.init()
@@ -25,6 +29,7 @@ class IdleState: GKState {
 
     override func didEnter(from previousState: GKState?) {
         super.didEnter(from: previousState)
+        soundComponent?.stopAudio(audioType: .walking)
         animatedSpriteComponent?.spriteNode.removeAllActions()
         animatedSpriteComponent?.spriteNode.run(SKAction.setTexture((animatedSpriteComponent?.animationTextures.first)!, resize: true))
     }

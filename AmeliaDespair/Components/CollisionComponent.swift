@@ -14,7 +14,7 @@ enum CollisionShape {
 
 class CollisionComponent: GKComponent {
     var physicsBody: SKPhysicsBody?
-
+    
     var spriteNode: SKSpriteNode? {
         return entity?.component(ofType: AnimatedSpriteComponent.self)?.spriteNode
     }
@@ -36,7 +36,10 @@ class CollisionComponent: GKComponent {
         }
         physicsBody?.affectedByGravity = false
         physicsBody?.allowsRotation = false
+        //for some reason, the contactTestBitMask needs to get a value for the detection of collision 
+        physicsBody?.contactTestBitMask = 2
         spriteNode.physicsBody = physicsBody
     }
+    
 
 }

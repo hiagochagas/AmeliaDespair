@@ -25,6 +25,10 @@ class WalkState: GKState {
         self.entity.component(ofType: MovementComponent.self)
     }
 
+    var soundComponent: SoundComponent? {
+        self.entity.component(ofType: SoundComponent.self)
+    }
+
     init(_ entity: GKEntity) {
         self.entity = entity
         super.init()
@@ -32,6 +36,7 @@ class WalkState: GKState {
 
     override func didEnter(from previousState: GKState?) {
         setAnimation(forDirection: direction)
+        setAudio()
     }
 
     override func update(deltaTime seconds: TimeInterval) {
@@ -40,6 +45,10 @@ class WalkState: GKState {
         direction = directionFor(velocity: movementComponent.velocity)
         movementComponent.move()
         animatedSpriteComponent?.spriteNode.speed = CGFloat.clamp(sin(movementComponent.velocity.length * 0.05), 0.2, 1)
+    }
+
+    func setAudio() {
+        soundComponent?.playAudioRepeatedly(audioType: .walking)
     }
 
     func setAnimation(forDirection direction: Direction) {
