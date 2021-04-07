@@ -41,7 +41,7 @@ class MenuScene: SKScene {
         addChild(playButton)
         playButton.tapClosure = {
             let gameScene = GameScene(size: self.size)
-            let transition = SKTransition.fade(withDuration: 0.5)
+            let transition = SKTransition.fade(withDuration: 1.5)
             self.view?.presentScene(gameScene, transition: transition)
         }
     }

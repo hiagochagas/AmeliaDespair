@@ -7,7 +7,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
 
     var gameNode: GameNode!
     var pauseNode: PauseNode!
@@ -28,10 +28,12 @@ class GameScene: SKScene {
     }()
 
     override func didMove(to view: SKView) {
+        self.physicsWorld.contactDelegate = self
         setupCamera()
         setupGameNode()
         setupPauseNode()
         setupBlurNode()
+        createAudioNode()
     }
 
     override func update(_ currentTime: TimeInterval) {
@@ -60,6 +62,12 @@ class GameScene: SKScene {
 
     func setupBlurNode() {
         addChild(blurNode)
+    }
+    // we needed to create this audioNode to stop stuttering the game when it boots
+    func createAudioNode() {
+        let audioNode = SKAudioNode(fileNamed: "")
+        audioNode.run(SKAction.changeVolume(to: 0.0, duration: 0))
+        addChild(audioNode)
     }
 
     func addImageToBlurNode() {
@@ -106,5 +114,12 @@ class GameScene: SKScene {
         gameNode.isHidden = false
         gameNode.pauseButton.isHidden = false
         gameNode.joystick.isHidden = false
+    }
+
+    func didBegin(_ contact: SKPhysicsContact) {
+        if let entity = contact.bodyB.node?.entity {
+            let soundComponent = entity.component(ofType: SoundComponent.self)
+            soundComponent?.playAudioOnce(audioType: .colliding)
+        }
     }
 }

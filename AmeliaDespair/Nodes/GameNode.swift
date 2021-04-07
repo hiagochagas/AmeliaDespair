@@ -65,6 +65,7 @@ class GameNode: SKNode {
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
         playerSprite.setScale(0.13)
         addChild(playerSprite)
+        
     }
 
     func setupJoystick() {

@@ -30,11 +30,12 @@ class AnimatedSpriteComponent: GKComponent {
         spriteNode = SKSpriteNode(imageNamed: imageName)
     }
 
-    init(atlasName: String) {
+    init(atlasName: String, entity: GKEntity) {
         super.init()
         self.animationAtlas = SKTextureAtlas(named: atlasName)
         self.spriteNode = SKSpriteNode(imageNamed: animationAtlas!.textureNames.first!)
         self.spriteNode.texture = animationTextures.first!
+        self.spriteNode.entity = entity
     }
 
     func setAnimation(atlasName: String) {
