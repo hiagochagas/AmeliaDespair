@@ -11,18 +11,17 @@ class AnimatedSpriteComponent: GKComponent {
 
     var spriteNode: SKSpriteNode!
     var animationAtlas: SKTextureAtlas?
-
     var animationTextures: [SKTexture] {
         animationAtlas?.textureNames.sorted().compactMap { textureName in animationAtlas?.textureNamed(textureName) } ?? []
     }
 
     override init() {
         super.init()
-        spriteNode = SKSpriteNode(color: .white, size: CGSize(width: 100, height: 100))
+        self.spriteNode = SKSpriteNode(color: .white, size: CGSize(width: 100, height: 100))
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return nil
     }
 
     init(imageName: String) {
@@ -38,12 +37,14 @@ class AnimatedSpriteComponent: GKComponent {
         self.spriteNode.entity = entity
     }
 
-    func setAnimation(atlasName: String) {
+    func setAnimation(atlasName: String, textures: SKTextureAtlas? = nil) {
             spriteNode.removeAllActions()
-
-            self.animationAtlas = SKTextureAtlas(named: atlasName)
+            if let textures = textures {
+                self.animationAtlas = textures
+            } else {
+                self.animationAtlas = SKTextureAtlas(named: atlasName)
+            }
             self.spriteNode.texture = animationTextures.first!
-
             spriteNode.run(
                 SKAction.repeatForever(
                     SKAction.animate(
