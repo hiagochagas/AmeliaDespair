@@ -63,9 +63,8 @@ class GameNode: SKNode {
         }
         player.component(ofType: CollisionComponent.self)?.loadCollision()
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
-        playerSprite.setScale(0.13)
+        playerSprite.setScale(0.15)
         addChild(playerSprite)
-        
     }
 
     func setupJoystick() {
@@ -98,7 +97,7 @@ class GameNode: SKNode {
         background.component(ofType: CollisionComponent.self)?.loadCollision(shape: .edgeLoop)
         backgroundSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
         backgroundSprite.zPosition = DrawingPlane.background.rawValue
-        backgroundSprite.setScale(0.5)
+        backgroundSprite.setScale(0.7)
         addChild(backgroundSprite)
     }
 

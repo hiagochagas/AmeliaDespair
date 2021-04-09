@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5716258C260583DC00477D9E /* BackgroundEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5716258B260583DC00477D9E /* BackgroundEntity.swift */; };
 		571625932605891B00477D9E /* DrawingPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571625922605891B00477D9E /* DrawingPlane.swift */; };
+		571954A2261F440B00A75935 /* GameOverNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571954A1261F440B00A75935 /* GameOverNode.swift */; };
 		5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5721ECD62600DBB700A7071C /* LaunchScreen.storyboard */; };
 		5721ECDC2600DC7D00A7071C /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECDB2600DC7D00A7071C /* PlayerEntity.swift */; };
 		5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		5716258B260583DC00477D9E /* BackgroundEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundEntity.swift; sourceTree = "<group>"; };
 		571625922605891B00477D9E /* DrawingPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPlane.swift; sourceTree = "<group>"; };
+		571954A1261F440B00A75935 /* GameOverNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverNode.swift; sourceTree = "<group>"; };
 		5721ECD72600DBB700A7071C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5721ECDB2600DC7D00A7071C /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
 		5721ECDE2600DCBB00A7071C /* LongHandsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongHandsEntity.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				5721ECF92600EA8100A7071C /* AnalogJoystick.swift */,
 				6EF9A8AE25FFA3BF007A751D /* GameNode.swift */,
 				57926738260B7FF200FFB0E4 /* PauseNode.swift */,
+				571954A1261F440B00A75935 /* GameOverNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */,
 				578AD349261014E700CCEA5F /* CGPointExtension.swift in Sources */,
 				5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */,
+				571954A2261F440B00A75935 /* GameOverNode.swift in Sources */,
 				5716258C260583DC00477D9E /* BackgroundEntity.swift in Sources */,
 				5721ECEB2600DD5000A7071C /* AnimatedSpriteComponent.swift in Sources */,
 			);
@@ -691,7 +695,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = BSANZ76H3Y;
+				DEVELOPMENT_TEAM = 828XYUZTZQ;
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
