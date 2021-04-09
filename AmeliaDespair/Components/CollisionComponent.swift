@@ -14,7 +14,7 @@ enum CollisionShape {
 
 class CollisionComponent: GKComponent {
     var physicsBody: SKPhysicsBody?
-    
+
     var spriteNode: SKSpriteNode? {
         return entity?.component(ofType: AnimatedSpriteComponent.self)?.spriteNode
     }
@@ -40,6 +40,5 @@ class CollisionComponent: GKComponent {
         physicsBody?.contactTestBitMask = 2
         spriteNode.physicsBody = physicsBody
     }
-    
 
 }

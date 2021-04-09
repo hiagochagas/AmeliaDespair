@@ -11,7 +11,7 @@ class PlayerEntity: GKEntity {
 
     override init() {
         super.init()
-        self.addComponent(AnimatedSpriteComponent(atlasName: "PlayerWalkDown", entity: self))
+        self.addComponent(AnimatedSpriteComponent(atlasName: PlayerAtlasName.walkDown.rawValue, entity: self))
         self.addComponent(MovementComponent())
         self.addComponent(CollisionComponent())
         self.addComponent(PlayerControlComponent(states: [IdleState(self), WalkState(self)]))
@@ -22,4 +22,3 @@ class PlayerEntity: GKEntity {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

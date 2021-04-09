@@ -28,6 +28,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }()
 
     override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        setup()
+    }
+
+    func setup() {
         self.physicsWorld.contactDelegate = self
         setupCamera()
         setupGameNode()
@@ -89,6 +94,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.view?.presentScene(menuScene, transition: transition)
     }
 
+    func restartGame() {
+        let menuScene = GameScene(size: self.size)
+        let transition = SKTransition.fade(withDuration: 0.5)
+        self.view?.presentScene(menuScene, transition: transition)
+    }
+
     func pauseGame() {
         pauseNode.position = gameNode.sceneCamera.position
         pauseNode.isHidden = false
@@ -116,10 +127,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gameNode.joystick.isHidden = false
     }
 
+    func endGame() {
+        let gameOverNode = GameOverNode(gameScene: self)
+        gameOverNode.zPosition = DrawingPlane.foreground.rawValue
+        addChild(gameOverNode)
+
+        gameOverNode.position = gameNode.sceneCamera.position
+        gameNode.isPaused = true
+        gameNode.joystick.isUserInteractionEnabled = false
+        gameNode.pauseButton.isUserInteractionEnabled = false
+        gameNode.joystick.on(.move) { _ in }
+        gameNode.playerMoveComponent?.velocity = .zero
+
+        blurNode.isHidden = false
+        gameNode.isHidden = true
+        gameNode.pauseButton.isHidden = true
+        gameNode.joystick.isHidden = true
+        addImageToBlurNode()
+    }
+
     func didBegin(_ contact: SKPhysicsContact) {
         if let entity = contact.bodyB.node?.entity {
             let soundComponent = entity.component(ofType: SoundComponent.self)
             soundComponent?.playAudioOnce(audioType: .colliding)
+            endGame()
         }
     }
 }

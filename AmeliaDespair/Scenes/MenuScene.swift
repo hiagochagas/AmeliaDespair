@@ -27,8 +27,14 @@ class MenuScene: SKScene {
 
     override func didMove(to view: SKView) {
         backgroundColor = .black
-        setupGameTitleLabel()
-        setupPlayButton()
+        preloadGameScene()
+        self.setupGameTitleLabel()
+        self.setupPlayButton()
+    }
+
+    func preloadGameScene() {
+        let scene = GameScene(size: self.size)
+        scene.setup()
     }
 
     func setupGameTitleLabel() {
@@ -41,7 +47,7 @@ class MenuScene: SKScene {
         addChild(playButton)
         playButton.tapClosure = {
             let gameScene = GameScene(size: self.size)
-            let transition = SKTransition.fade(withDuration: 1.5)
+            let transition = SKTransition.fade(withDuration: 0.5)
             self.view?.presentScene(gameScene, transition: transition)
         }
     }
