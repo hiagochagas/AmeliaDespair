@@ -9,7 +9,7 @@ import SpriteKit
 import GameplayKit
 
 enum CollisionShape {
-    case rectangle, edgeLoop
+    case rectangle, edgeLoop, enemyRectangle
 }
 
 class CollisionComponent: GKComponent {
@@ -33,10 +33,12 @@ class CollisionComponent: GKComponent {
             physicsBody = SKPhysicsBody(rectangleOf: spriteNode.size)
         case .edgeLoop:
             physicsBody = SKPhysicsBody(edgeLoopFrom: spriteNode.frame)
+        case .enemyRectangle:
+            physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: spriteNode.size.width, height: spriteNode.size.height * 0.1))
         }
         physicsBody?.affectedByGravity = false
         physicsBody?.allowsRotation = false
-        //for some reason, the contactTestBitMask needs to get a value for the detection of collision 
+        // for some reason, the contactTestBitMask needs to get a value for the detection of collision 
         physicsBody?.contactTestBitMask = 2
         spriteNode.physicsBody = physicsBody
     }

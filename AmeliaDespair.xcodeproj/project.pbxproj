@@ -51,6 +51,14 @@
 		6E18B6C7261B5BCB00E1A75C /* bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E18B6C6261B5BCB00E1A75C /* bump.wav */; };
 		6E6D6272261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */; };
 		6EA2E0DF2611FE7D00223CE9 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2E0DC2611FDCF00223CE9 /* GameBackground.png */; };
+		6EB9518B262EFD8C00B64F78 /* EnemyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */; };
+		6EB9518F262EFDC000B64F78 /* EnemyAtlasName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9518E262EFDC000B64F78 /* EnemyAtlasName.swift */; };
+		6EB951B1262F167A00B64F78 /* EnemyWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */; };
+		6EB951B5262F168000B64F78 /* EnemyWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */; };
+		6EB951B9262F168900B64F78 /* EnemyWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */; };
+		6EB951BD262F168F00B64F78 /* EnemyWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951BC262F168F00B64F78 /* EnemyWalkUp.atlas */; };
+		6EB951C1262F55BF00B64F78 /* EnemyControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */; };
+		6EB951C7262F55E400B64F78 /* EnemyWalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */; };
 		6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */; };
 		6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8AE25FFA3BF007A751D /* GameNode.swift */; };
 		6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B025FFA3BF007A751D /* GameViewController.swift */; };
@@ -116,6 +124,14 @@
 		6E18B6C6261B5BCB00E1A75C /* bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bump.wav; sourceTree = "<group>"; };
 		6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSpriteComponentTests.swift; sourceTree = "<group>"; };
 		6EA2E0DC2611FDCF00223CE9 /* GameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground.png; sourceTree = "<group>"; };
+		6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyEntity.swift; sourceTree = "<group>"; };
+		6EB9518E262EFDC000B64F78 /* EnemyAtlasName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyAtlasName.swift; sourceTree = "<group>"; };
+		6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkDown.atlas; sourceTree = "<group>"; };
+		6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkLeft.atlas; sourceTree = "<group>"; };
+		6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkRight.atlas; sourceTree = "<group>"; };
+		6EB951BC262F168F00B64F78 /* EnemyWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkUp.atlas; sourceTree = "<group>"; };
+		6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnemyControlComponent.swift; path = AmeliaDespair/Components/EnemyControlComponent.swift; sourceTree = SOURCE_ROOT; };
+		6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyWalkState.swift; sourceTree = "<group>"; };
 		6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeliaDespair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EF9A8AE25FFA3BF007A751D /* GameNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNode.swift; sourceTree = "<group>"; };
@@ -147,6 +163,10 @@
 		5716258426057A5A00477D9E /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				6EB951BC262F168F00B64F78 /* EnemyWalkUp.atlas */,
+				6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */,
+				6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */,
+				6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */,
 				57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */,
 				575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */,
 				578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */,
@@ -165,6 +185,7 @@
 				571625922605891B00477D9E /* DrawingPlane.swift */,
 				57531ACE26091C46005EEA5F /* Direction.swift */,
 				57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */,
+				6EB9518E262EFDC000B64F78 /* EnemyAtlasName.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -194,6 +215,7 @@
 				5721ECE12600DCD100A7071C /* CrackedHeadEntity.swift */,
 				5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */,
 				5716258B260583DC00477D9E /* BackgroundEntity.swift */,
+				6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -201,6 +223,7 @@
 		5751BF1D2600D2B10032D010 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */,
 				5721ECE72600DD3500A7071C /* MovementComponent.swift */,
 				5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */,
 				6EFDEC582603765600B21561 /* CollisionComponent.swift */,
@@ -254,6 +277,7 @@
 			children = (
 				57531ACA26091C12005EEA5F /* IdleState.swift */,
 				575E10BC2608E4A9000F414E /* WalkState.swift */,
+				6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -420,6 +444,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB951B9262F168900B64F78 /* EnemyWalkRight.atlas in Resources */,
+				6EB951BD262F168F00B64F78 /* EnemyWalkUp.atlas in Resources */,
 				6E18B6C7261B5BCB00E1A75C /* bump.wav in Resources */,
 				6EA2E0DF2611FE7D00223CE9 /* GameBackground.png in Resources */,
 				6E18B6BD261B48D800E1A75C /* playerWalking.wav in Resources */,
@@ -431,10 +457,12 @@
 				575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */,
 				575E10892608CB87000F414E /* ActionButton.png in Resources */,
 				572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */,
+				6EB951B1262F167A00B64F78 /* EnemyWalkDown.atlas in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */,
 				578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
+				6EB951B5262F168000B64F78 /* EnemyWalkLeft.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +511,7 @@
 				57926741260B840600FFB0E4 /* GameScene.swift in Sources */,
 				57BC6C4B260E267A00180822 /* LabelButton.swift in Sources */,
 				6EFDEC592603765600B21561 /* CollisionComponent.swift in Sources */,
+				6EB9518B262EFD8C00B64F78 /* EnemyEntity.swift in Sources */,
 				57531ACF26091C46005EEA5F /* Direction.swift in Sources */,
 				575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */,
 				575E10852608C8E9000F414E /* AttackComponent.swift in Sources */,
@@ -491,18 +520,21 @@
 				6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */,
 				578AD3622610296000CCEA5F /* CGFloatExtension.swift in Sources */,
 				572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */,
+				6EB951C7262F55E400B64F78 /* EnemyWalkState.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
 				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,
 				5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */,
 				57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */,
 				6E18B6AD261B363C00E1A75C /* SoundComponent.swift in Sources */,
 				57926739260B7FF200FFB0E4 /* PauseNode.swift in Sources */,
+				6EB951C1262F55BF00B64F78 /* EnemyControlComponent.swift in Sources */,
 				6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */,
 				5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */,
 				5721ECE22600DCD100A7071C /* CrackedHeadEntity.swift in Sources */,
 				5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */,
 				5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */,
 				578AD349261014E700CCEA5F /* CGPointExtension.swift in Sources */,
+				6EB9518F262EFDC000B64F78 /* EnemyAtlasName.swift in Sources */,
 				5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */,
 				571954A2261F440B00A75935 /* GameOverNode.swift in Sources */,
 				5716258C260583DC00477D9E /* BackgroundEntity.swift in Sources */,
@@ -695,7 +727,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 828XYUZTZQ;
+				DEVELOPMENT_TEAM = BSANZ76H3Y;
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
