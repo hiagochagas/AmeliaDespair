@@ -45,7 +45,7 @@ class GameNode: SKNode {
     }
 
     init(camera: SKCameraNode) {
-//        camera.setScale(1.5)
+        camera.setScale(1.5)
         self.sceneCamera = camera
         super.init()
         setupPlayerSprite()
@@ -106,8 +106,11 @@ class GameNode: SKNode {
 
     func setupRooms() {
         let officeNode = OfficeNode()
+        let hallwayNode = HallwayNode()
         officeNode.position = CGPoint(x: UIScreen.main.bounds.midX + 700, y: UIScreen.main.bounds.midY - 790)
         addChild(officeNode)
+        hallwayNode.position = CGPoint(x: UIScreen.main.bounds.midX + 490, y: UIScreen.main.bounds.minY + 250)
+        addChild(hallwayNode)
     }
 
     func setupPauseButton() {
