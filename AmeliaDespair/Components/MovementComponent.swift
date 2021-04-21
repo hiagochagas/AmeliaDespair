@@ -9,7 +9,7 @@ import GameplayKit
 
 class MovementComponent: GKComponent {
     var velocity = CGPoint(x: 0, y: 0)
-    let velocityMultiplier: CGFloat = 0.15
+    let velocityMultiplier: CGFloat = 0.5
 
     var spriteNode: SKSpriteNode? {
         self.entity?.component(ofType: AnimatedSpriteComponent.self)?.spriteNode

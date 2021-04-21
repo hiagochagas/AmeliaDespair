@@ -150,7 +150,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let entity = contact.bodyB.node?.entity {
             let soundComponent = entity.component(ofType: SoundComponent.self)
             soundComponent?.playAudioOnce(audioType: .colliding)
-            endGame()
+//            endGame()
         }
     }
 }

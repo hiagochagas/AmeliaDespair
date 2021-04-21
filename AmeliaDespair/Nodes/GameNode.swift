@@ -11,7 +11,7 @@ import GameplayKit
 class GameNode: SKNode {
 
     let player = PlayerEntity()
-    let background = BackgroundEntity()
+    let background = SceneryEntity(imageName: "GameBackground")
     var parentViewController: GameViewController!
     var sceneCamera: SKCameraNode
     var gameScene: GameScene?
@@ -45,11 +45,13 @@ class GameNode: SKNode {
     }
 
     init(camera: SKCameraNode) {
+//        camera.setScale(1.5)
         self.sceneCamera = camera
         super.init()
         setupPlayerSprite()
         setupJoystick()
         setupBackground()
+        setupRooms()
         setupPauseButton()
     }
 
@@ -62,6 +64,7 @@ class GameNode: SKNode {
             return
         }
         player.component(ofType: CollisionComponent.self)?.loadCollision()
+        playerSprite.zPosition = DrawingPlane.foreground.rawValue
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
         playerSprite.setScale(0.15)
         addChild(playerSprite)
@@ -71,6 +74,7 @@ class GameNode: SKNode {
         if let spritePosition = playerAnimatedSpriteComponent?.spriteNode.position {
             sceneCamera.position = spritePosition
         }
+        joystick.zPosition = DrawingPlane.hud.rawValue
         joystick.position = convert(joystick.position, to: sceneCamera)
         sceneCamera.addChild(joystick)
         joystick.on(.move) { (movingJoystick) in
@@ -97,8 +101,13 @@ class GameNode: SKNode {
         background.component(ofType: CollisionComponent.self)?.loadCollision(shape: .edgeLoop)
         backgroundSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
         backgroundSprite.zPosition = DrawingPlane.background.rawValue
-        backgroundSprite.setScale(0.7)
         addChild(backgroundSprite)
+    }
+
+    func setupRooms() {
+        let officeNode = OfficeNode()
+        officeNode.position = CGPoint(x: UIScreen.main.bounds.midX + 700, y: UIScreen.main.bounds.midY - 790)
+        addChild(officeNode)
     }
 
     func setupPauseButton() {
