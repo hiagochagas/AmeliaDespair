@@ -49,6 +49,7 @@
 		6E18B6BD261B48D800E1A75C /* playerWalking.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E18B6BC261B48D800E1A75C /* playerWalking.wav */; };
 		6E18B6C1261B51BE00E1A75C /* SoundComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */; };
 		6E18B6C7261B5BCB00E1A75C /* bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E18B6C6261B5BCB00E1A75C /* bump.wav */; };
+		6E2937CE26306CDC0037921E /* EnemyWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6E2937CD26306CDC0037921E /* EnemyWalkUp.atlas */; };
 		6E6D6272261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */; };
 		6EA2E0DF2611FE7D00223CE9 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2E0DC2611FDCF00223CE9 /* GameBackground.png */; };
 		6EB9518B262EFD8C00B64F78 /* EnemyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */; };
@@ -56,7 +57,6 @@
 		6EB951B1262F167A00B64F78 /* EnemyWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */; };
 		6EB951B5262F168000B64F78 /* EnemyWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */; };
 		6EB951B9262F168900B64F78 /* EnemyWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */; };
-		6EB951BD262F168F00B64F78 /* EnemyWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951BC262F168F00B64F78 /* EnemyWalkUp.atlas */; };
 		6EB951C1262F55BF00B64F78 /* EnemyControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */; };
 		6EB951C7262F55E400B64F78 /* EnemyWalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */; };
 		6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */; };
@@ -122,6 +122,7 @@
 		6E18B6BC261B48D800E1A75C /* playerWalking.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerWalking.wav; sourceTree = "<group>"; };
 		6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundComponentTests.swift; sourceTree = "<group>"; };
 		6E18B6C6261B5BCB00E1A75C /* bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bump.wav; sourceTree = "<group>"; };
+		6E2937CD26306CDC0037921E /* EnemyWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkUp.atlas; sourceTree = "<group>"; };
 		6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSpriteComponentTests.swift; sourceTree = "<group>"; };
 		6EA2E0DC2611FDCF00223CE9 /* GameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground.png; sourceTree = "<group>"; };
 		6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyEntity.swift; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 		6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkDown.atlas; sourceTree = "<group>"; };
 		6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkLeft.atlas; sourceTree = "<group>"; };
 		6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkRight.atlas; sourceTree = "<group>"; };
-		6EB951BC262F168F00B64F78 /* EnemyWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkUp.atlas; sourceTree = "<group>"; };
 		6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnemyControlComponent.swift; path = AmeliaDespair/Components/EnemyControlComponent.swift; sourceTree = SOURCE_ROOT; };
 		6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyWalkState.swift; sourceTree = "<group>"; };
 		6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeliaDespair.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +163,7 @@
 		5716258426057A5A00477D9E /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				6EB951BC262F168F00B64F78 /* EnemyWalkUp.atlas */,
+				6E2937CD26306CDC0037921E /* EnemyWalkUp.atlas */,
 				6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */,
 				6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */,
 				6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */,
@@ -445,7 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EB951B9262F168900B64F78 /* EnemyWalkRight.atlas in Resources */,
-				6EB951BD262F168F00B64F78 /* EnemyWalkUp.atlas in Resources */,
+				6E2937CE26306CDC0037921E /* EnemyWalkUp.atlas in Resources */,
 				6E18B6C7261B5BCB00E1A75C /* bump.wav in Resources */,
 				6EA2E0DF2611FE7D00223CE9 /* GameBackground.png in Resources */,
 				6E18B6BD261B48D800E1A75C /* playerWalking.wav in Resources */,
