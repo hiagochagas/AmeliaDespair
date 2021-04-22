@@ -3,12 +3,13 @@
 //  AmeliaDespair
 //
 //  Created by Rodrigo Matos Aguiar on 24/03/21.
-//
+// swiftlint:disable identifier_name
 
 import SpriteKit
+import AVFoundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-
+    var audioPlayer: AVAudioPlayer?
     var gameNode: GameNode!
     var pauseNode: PauseNode!
     var blurNode: SKEffectNode = {
@@ -64,6 +65,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pauseNode.isHidden = true
         pauseNode.zPosition = DrawingPlane.foreground.rawValue
     }
+    
+    func playAudio() {
+        let path = Bundle.main.path(forResource: "gameSong", ofType: "wav")!
+        let url = URL(fileURLWithPath: path)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.volume = 0.8
+            audioPlayer?.numberOfLoops = .max
+            audioPlayer?.play()
+        } catch {
+            // couldn't load file :(
+        }
+    }
 
     func setupBlurNode() {
         addChild(blurNode)
@@ -89,12 +103,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func returnToMainMenu() {
+        audioPlayer?.stop()
         let menuScene = MenuScene(size: self.size)
         let transition = SKTransition.fade(withDuration: 0.5)
         self.view?.presentScene(menuScene, transition: transition)
     }
 
     func restartGame() {
+        audioPlayer?.stop()
         let menuScene = GameScene(size: self.size)
         let transition = SKTransition.fade(withDuration: 0.5)
         self.view?.presentScene(menuScene, transition: transition)
