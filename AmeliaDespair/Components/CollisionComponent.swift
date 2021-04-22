@@ -50,7 +50,7 @@ class CollisionComponent: GKComponent {
     func loadCollision(physicsBody: SKPhysicsBody) {
         physicsBody.affectedByGravity = false
         physicsBody.allowsRotation = false
-        //for some reason, the contactTestBitMask needs to get a value for the detection of collision
+        // for some reason, the contactTestBitMask needs to get a value for the detection of collision
         physicsBody.contactTestBitMask = 2
         spriteNode?.physicsBody = physicsBody
     }
