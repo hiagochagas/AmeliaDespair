@@ -18,6 +18,7 @@ class AnimatedSpriteComponent: GKComponent {
     override init() {
         super.init()
         self.spriteNode = SKSpriteNode(color: .white, size: CGSize(width: 100, height: 100))
+        self.spriteNode.lightingBitMask = 0b0001
     }
 
     required init?(coder: NSCoder) {
@@ -26,7 +27,8 @@ class AnimatedSpriteComponent: GKComponent {
 
     init(imageName: String) {
         super.init()
-        spriteNode = SKSpriteNode(imageNamed: imageName)
+        self.spriteNode = SKSpriteNode(imageNamed: imageName)
+        self.spriteNode.lightingBitMask = 0b0001
     }
 
     init(atlasName: String, entity: GKEntity) {
@@ -35,6 +37,7 @@ class AnimatedSpriteComponent: GKComponent {
         self.spriteNode = SKSpriteNode(imageNamed: animationAtlas!.textureNames.first!)
         self.spriteNode.texture = animationTextures.first!
         self.spriteNode.entity = entity
+        self.spriteNode.lightingBitMask = 0b0001
     }
 
     func setAnimation(atlasName: String, textures: SKTextureAtlas? = nil) {

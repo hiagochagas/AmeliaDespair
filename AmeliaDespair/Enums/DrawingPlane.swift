@@ -13,6 +13,8 @@ enum DrawingPlane: CGFloat {
     case middleground = 1
     case foreground = 2
     case afterground = 3
-    case amelia = 4
-    case hud = 5
+    case character = 4
+    case shadowLayer = 7
+    case lighting = 8
+    case hud = 9
 }

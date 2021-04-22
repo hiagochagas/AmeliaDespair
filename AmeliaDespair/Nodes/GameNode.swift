@@ -67,6 +67,7 @@ class GameNode: SKNode {
         setupBackground()
         setupRooms()
         setupPauseButton()
+        setupLighting()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -81,10 +82,28 @@ class GameNode: SKNode {
             let physicsBody = SKPhysicsBody(circleOfRadius: 100, center: CGPoint(x: 0, y: -400))
             collisionComponent.loadCollision(physicsBody: physicsBody)
         }
-        playerSprite.zPosition = DrawingPlane.amelia.rawValue
+        playerSprite.zPosition = DrawingPlane.character.rawValue
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
         playerSprite.setScale(0.15)
         addChild(playerSprite)
+    }
+
+    func setupLighting() {
+        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
+            return
+        }
+        let shadowLayer = SKSpriteNode(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25), size: backgroundSprite.size)
+        shadowLayer.zPosition = DrawingPlane.shadowLayer.rawValue
+        backgroundSprite.addChild(shadowLayer)
+//        let lightNode = SKLightNode()
+//        lightNode.categoryBitMask = 0b0001
+//        lightNode.lightColor = .white
+//        lightNode.zPosition = DrawingPlane.lighting.rawValue
+//        lightNode.falloff = 0.1
+//        lightNode.setScale(100)
+//        if let playerSprite = playerAnimatedSpriteComponent?.spriteNode {
+//            playerSprite.addChild(lightNode)
+//        }
     }
 
     func setupEnemySprite() {
@@ -93,6 +112,7 @@ class GameNode: SKNode {
             let physicsBody = SKPhysicsBody(circleOfRadius: 150, center: CGPoint(x: 0, y: -400))
             collisionComponent.loadCollision(physicsBody: physicsBody)
         }
+        enemySprite.zPosition = DrawingPlane.character.rawValue
         enemySprite.position = CGPoint(x: 150, y: 150)
         enemySprite.setScale(0.15)
         addChild(enemySprite)
@@ -155,6 +175,7 @@ class GameNode: SKNode {
 
     func setupPauseButton() {
         pauseButton.position = convert(pauseButton.position, to: sceneCamera)
+        pauseButton.zPosition = DrawingPlane.hud.rawValue
         pauseButton.tapClosure = {
             self.gameScene?.pauseGame()
         }
