@@ -3,7 +3,7 @@
 //  AmeliaDespair
 //
 //  Created by Hiago Chagas on 15/03/21.
-//
+//  swiftlint:disable trailing_whitespace
 
 import SpriteKit
 import GameplayKit
@@ -89,21 +89,15 @@ class GameNode: SKNode {
     }
 
     func setupLighting() {
-        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
-            return
+        
+        let lightNode = SKLightNode()
+        lightNode.categoryBitMask = 1
+        lightNode.lightColor = SKColor.white
+        lightNode.zPosition = DrawingPlane.lighting.rawValue
+        lightNode.falloff = 1.7
+        if let playerSprite = playerAnimatedSpriteComponent?.spriteNode {
+            playerSprite.addChild(lightNode)
         }
-        let shadowLayer = SKSpriteNode(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.25), size: backgroundSprite.size)
-        shadowLayer.zPosition = DrawingPlane.shadowLayer.rawValue
-        backgroundSprite.addChild(shadowLayer)
-//        let lightNode = SKLightNode()
-//        lightNode.categoryBitMask = 0b0001
-//        lightNode.lightColor = .white
-//        lightNode.zPosition = DrawingPlane.lighting.rawValue
-//        lightNode.falloff = 0.1
-//        lightNode.setScale(100)
-//        if let playerSprite = playerAnimatedSpriteComponent?.spriteNode {
-//            playerSprite.addChild(lightNode)
-//        }
     }
 
     func setupEnemySprite() {
