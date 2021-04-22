@@ -68,6 +68,7 @@ class GameNode: SKNode {
         setupRooms()
         setupPauseButton()
         setupLighting()
+        setupBackgroundWalls()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -107,7 +108,7 @@ class GameNode: SKNode {
             collisionComponent.loadCollision(physicsBody: physicsBody)
         }
         enemySprite.zPosition = DrawingPlane.character.rawValue
-        enemySprite.position = CGPoint(x: 150, y: 150)
+        enemySprite.position = CGPoint(x: -400, y: 600)
         enemySprite.setScale(0.15)
         addChild(enemySprite)
     }
@@ -159,13 +160,15 @@ class GameNode: SKNode {
         addChild(kitchenNode)
     }
 
-//    func setupBackgroundWalls() {
-//        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
-//            return
-//        }
-//        let backgroundWalls = BackgroundWallsNode()
-//        backgroundSprite.addChild(backgroundWalls)
-//    }
+    func setupBackgroundWalls() {
+        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
+            return
+        }
+        
+        let backgroundWalls = BackgroundWallsNode()
+        
+        backgroundSprite.addChild(backgroundWalls)
+    }
 
     func setupPauseButton() {
         pauseButton.position = convert(pauseButton.position, to: sceneCamera)
@@ -203,8 +206,8 @@ class GameNode: SKNode {
     }
 
     func determineVelocity(playerPosition: CGPoint, enemyPosition: CGPoint) -> CGPoint {
-        var velocityX: CGFloat = 7.0
-        var velocityY: CGFloat = 7.0
+        var velocityX: CGFloat = 20.0
+        var velocityY: CGFloat = 20.0
         if abs(playerPosition.x - enemyPosition.x) <= 10 {
             velocityX = 0
         } else if (playerPosition.x < enemyPosition.x) {

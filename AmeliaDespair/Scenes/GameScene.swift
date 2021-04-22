@@ -65,7 +65,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pauseNode.isHidden = true
         pauseNode.zPosition = DrawingPlane.foreground.rawValue
     }
-    
+
     func playAudio() {
         let path = Bundle.main.path(forResource: "gameSong", ofType: "wav")!
         let url = URL(fileURLWithPath: path)
@@ -110,7 +110,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func restartGame() {
-        audioPlayer?.stop()
         let menuScene = GameScene(size: self.size)
         let transition = SKTransition.fade(withDuration: 0.5)
         self.view?.presentScene(menuScene, transition: transition)

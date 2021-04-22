@@ -27,8 +27,9 @@ class HallwayNode: SKNode {
         
         addScenery(named: "Sideboard", at: CGPoint(x: 60, y: 0))
         addScenery(named: "TableLamp", at: CGPoint(x: 60, y: 40), hasCollision: false, zPosition: .foreground)
+        
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

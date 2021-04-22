@@ -1,10 +1,16 @@
+// swiftlint:disable trailing_whitespace
+
 import GameplayKit
 
 class InvisibleWallEntity: GKEntity {
 
     override init() {
         super.init()
-        self.addComponent(AnimatedSpriteComponent())
+    }
+    
+    init(color: UIColor, size: CGSize) {
+        super.init()
+        self.addComponent(AnimatedSpriteComponent(color: color, size: size))
         self.addComponent(CollisionComponent())
     }
 
