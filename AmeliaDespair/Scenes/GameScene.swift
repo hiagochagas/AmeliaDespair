@@ -147,12 +147,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func didBegin(_ contact: SKPhysicsContact) {
-        if let entity = contact.bodyB.node?.entity {
-            let soundComponent = entity.component(ofType: SoundComponent.self)
-            soundComponent?.playAudioOnce(audioType: .colliding)
-            if(entity.isKind(of: EnemyEntity.self)) {
-                endGame()
-            }
+        guard let entityA = contact.bodyA.node?.entity else { return }
+        guard let entityB = contact.bodyB.node?.entity else { return }
+        let soundComponent = entityB.component(ofType: SoundComponent.self)
+        soundComponent?.playAudioOnce(audioType: .colliding)
+        if entityA.isKind(of: EnemyEntity.self) && entityB.isKind(of: PlayerEntity.self) || entityA.isKind(of: PlayerEntity.self) && entityB.isKind(of: EnemyEntity.self) {
+            endGame()
         }
     }
 }
