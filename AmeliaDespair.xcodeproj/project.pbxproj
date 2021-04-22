@@ -45,6 +45,8 @@
 		57CAD839260A14C100B5FACC /* PlayerAtlasName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */; };
 		57CAD840260A1BC200B5FACC /* GKStateMachineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */; };
 		57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */; };
+		690AA447262EFB3F003DA1E8 /* WalkStateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690AA446262EFB3F003DA1E8 /* WalkStateTest.swift */; };
+		690AA44B2630685F003DA1E8 /* IdleStateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690AA44A2630685F003DA1E8 /* IdleStateTest.swift */; };
 		6E18B6AD261B363C00E1A75C /* SoundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18B6AC261B363C00E1A75C /* SoundComponent.swift */; };
 		6E18B6BD261B48D800E1A75C /* playerWalking.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E18B6BC261B48D800E1A75C /* playerWalking.wav */; };
 		6E18B6C1261B51BE00E1A75C /* SoundComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */; };
@@ -118,6 +120,8 @@
 		57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAtlasName.swift; sourceTree = "<group>"; };
 		57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKStateMachineExtension.swift; sourceTree = "<group>"; };
 		57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkUp.atlas; sourceTree = "<group>"; };
+		690AA446262EFB3F003DA1E8 /* WalkStateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkStateTest.swift; sourceTree = "<group>"; };
+		690AA44A2630685F003DA1E8 /* IdleStateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleStateTest.swift; sourceTree = "<group>"; };
 		6E18B6AC261B363C00E1A75C /* SoundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundComponent.swift; sourceTree = "<group>"; };
 		6E18B6BC261B48D800E1A75C /* playerWalking.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerWalking.wav; sourceTree = "<group>"; };
 		6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundComponentTests.swift; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 				6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */,
 				6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */,
 				578F26E02602477700B421E4 /* Info.plist */,
+				690AA446262EFB3F003DA1E8 /* WalkStateTest.swift */,
+				690AA44A2630685F003DA1E8 /* IdleStateTest.swift */,
 			);
 			path = AmeliaDespairTests;
 			sourceTree = "<group>";
@@ -495,8 +501,10 @@
 			files = (
 				578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */,
 				6E6D6272261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift in Sources */,
+				690AA447262EFB3F003DA1E8 /* WalkStateTest.swift in Sources */,
 				6EFDEC5D2603822000B21561 /* CollisionComponentTests.swift in Sources */,
 				6E18B6C1261B51BE00E1A75C /* SoundComponentTests.swift in Sources */,
+				690AA44B2630685F003DA1E8 /* IdleStateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
