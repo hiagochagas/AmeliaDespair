@@ -146,11 +146,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addImageToBlurNode()
     }
 
-    func didBegin(_ contact: SKPhysicsContact) {
-        if let entity = contact.bodyB.node?.entity {
-            let soundComponent = entity.component(ofType: SoundComponent.self)
-            soundComponent?.playAudioOnce(audioType: .colliding)
+//    func didBegin(_ contact: SKPhysicsContact) {
+//        if let entity = contact.bodyB.node?.entity {
+//            let soundComponent = entity.component(ofType: SoundComponent.self)
+//            soundComponent?.playAudioOnce(audioType: .colliding)
 //            endGame()
-        }
-    }
+//        }
+//    }
 }
