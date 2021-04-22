@@ -89,7 +89,8 @@ class GameNode: SKNode {
 
     func setupEnemySprite() {
         guard let enemySprite = enemy.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else { return }
-        enemy.component(ofType: CollisionComponent.self)?.loadCollision(shape: .enemyRectangle)
+        let physicsBody = SKPhysicsBody(circleOfRadius: 100, center: CGPoint(x: 0, y: -400))
+        enemy.component(ofType: CollisionComponent.self)?.loadCollision(physicsBody: physicsBody)
         enemySprite.position = CGPoint(x: 150, y: 150)
         enemySprite.setScale(0.15)
         addChild(enemySprite)

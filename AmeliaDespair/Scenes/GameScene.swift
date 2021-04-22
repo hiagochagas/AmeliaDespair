@@ -150,7 +150,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if let entity = contact.bodyB.node?.entity {
             let soundComponent = entity.component(ofType: SoundComponent.self)
             soundComponent?.playAudioOnce(audioType: .colliding)
-            if(entity.isKind(of: EnemyEntity.self)) {
+            guard let playerEntity = contact.bodyA.node?.entity else { return }
+            if(entity.isKind(of: EnemyEntity.self) && playerEntity.isKind(of: PlayerEntity.self)) {
+                endGame()
+            } else if (entity.isKind(of: PlayerEntity.self) && playerEntity.isKind(of: EnemyEntity.self)) {
                 endGame()
             }
         }
