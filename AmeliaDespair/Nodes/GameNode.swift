@@ -111,6 +111,7 @@ class GameNode: SKNode {
         let officeNode = OfficeNode()
         let hallwayNode = HallwayNode()
         let livingRoomNode = LivingRoomNode()
+        let kitchenNode = KitchenNode()
         officeNode.position = CGPoint(x: UIScreen.main.bounds.midX + 700, y: UIScreen.main.bounds.midY - 790)
         addChild(officeNode)
         hallwayNode.position = CGPoint(x: UIScreen.main.bounds.midX + 490, y: UIScreen.main.bounds.minY + 250)
@@ -119,6 +120,8 @@ class GameNode: SKNode {
             return
         }
         backgroundSprite.addChild(livingRoomNode)
+        kitchenNode.position = CGPoint(x: UIScreen.main.bounds.midX - 750, y: UIScreen.main.bounds.minY + 250)
+        addChild(kitchenNode)
     }
 
 //    func setupBackgroundWalls() {
