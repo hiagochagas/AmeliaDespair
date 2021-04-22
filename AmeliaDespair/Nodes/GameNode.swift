@@ -3,7 +3,7 @@
 //  AmeliaDespair
 //
 //  Created by Hiago Chagas on 15/03/21.
-//
+//  swiftlint:disable trailing_whitespace
 
 import SpriteKit
 import GameplayKit
@@ -67,6 +67,7 @@ class GameNode: SKNode {
         setupBackground()
         setupRooms()
         setupPauseButton()
+        setupLighting()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -81,16 +82,31 @@ class GameNode: SKNode {
             let physicsBody = SKPhysicsBody(circleOfRadius: 100, center: CGPoint(x: 0, y: -400))
             collisionComponent.loadCollision(physicsBody: physicsBody)
         }
-        playerSprite.zPosition = DrawingPlane.amelia.rawValue
+        playerSprite.zPosition = DrawingPlane.character.rawValue
         playerSprite.position = CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.midY)
         playerSprite.setScale(0.15)
         addChild(playerSprite)
     }
 
+    func setupLighting() {
+        
+        let lightNode = SKLightNode()
+        lightNode.categoryBitMask = 1
+        lightNode.lightColor = SKColor.white
+        lightNode.zPosition = DrawingPlane.lighting.rawValue
+        lightNode.falloff = 1.7
+        if let playerSprite = playerAnimatedSpriteComponent?.spriteNode {
+            playerSprite.addChild(lightNode)
+        }
+    }
+
     func setupEnemySprite() {
         guard let enemySprite = enemy.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else { return }
-        let physicsBody = SKPhysicsBody(circleOfRadius: 100, center: CGPoint(x: 0, y: -400))
-        enemy.component(ofType: CollisionComponent.self)?.loadCollision(physicsBody: physicsBody)
+        if let collisionComponent = enemy.component(ofType: CollisionComponent.self) {
+            let physicsBody = SKPhysicsBody(circleOfRadius: 150, center: CGPoint(x: 0, y: -400))
+            collisionComponent.loadCollision(physicsBody: physicsBody)
+        }
+        enemySprite.zPosition = DrawingPlane.character.rawValue
         enemySprite.position = CGPoint(x: 150, y: 150)
         enemySprite.setScale(0.15)
         addChild(enemySprite)
@@ -153,6 +169,7 @@ class GameNode: SKNode {
 
     func setupPauseButton() {
         pauseButton.position = convert(pauseButton.position, to: sceneCamera)
+        pauseButton.zPosition = DrawingPlane.hud.rawValue
         pauseButton.tapClosure = {
             self.gameScene?.pauseGame()
         }
