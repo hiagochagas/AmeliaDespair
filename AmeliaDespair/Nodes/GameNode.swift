@@ -12,6 +12,7 @@ class GameNode: SKNode {
 
     let player = PlayerEntity()
     let background = SceneryEntity(imageName: "GameBackground")
+    let enemy = EnemyEntity()
     var parentViewController: GameViewController!
     var sceneCamera: SKCameraNode
     var gameScene: GameScene?
@@ -44,11 +45,24 @@ class GameNode: SKNode {
         player.component(ofType: PlayerControlComponent.self)
     }
 
+    var enemyMoveComponent: MovementComponent? {
+        enemy.component(ofType: MovementComponent.self)
+    }
+
+    var enemyAnimatedSpriteComponent: AnimatedSpriteComponent? {
+        enemy.component(ofType: AnimatedSpriteComponent.self)
+    }
+
+    var enemyControlComponent: EnemyControlComponent? {
+        enemy.component(ofType: EnemyControlComponent.self)
+    }
+
     init(camera: SKCameraNode) {
 //        camera.setScale(3.0)
         self.sceneCamera = camera
         super.init()
         setupPlayerSprite()
+        setupEnemySprite()
         setupJoystick()
         setupBackground()
         setupRooms()
@@ -73,6 +87,14 @@ class GameNode: SKNode {
         addChild(playerSprite)
     }
 
+    func setupEnemySprite() {
+        guard let enemySprite = enemy.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else { return }
+        enemy.component(ofType: CollisionComponent.self)?.loadCollision(shape: .enemyRectangle)
+        enemySprite.position = CGPoint(x: 150, y: 150)
+        enemySprite.setScale(0.15)
+        addChild(enemySprite)
+    }
+
     func setupJoystick() {
         if let spritePosition = playerAnimatedSpriteComponent?.spriteNode.position {
             sceneCamera.position = spritePosition
@@ -92,10 +114,6 @@ class GameNode: SKNode {
             self.playerControlComponent?.stateMachine.enterIfNeeded(IdleState.self)
         }
     }
-
-//    func setupActionButton() {
-//
-//    }
 
     func setupBackground() {
         guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
@@ -141,10 +159,44 @@ class GameNode: SKNode {
     }
 
     func update(_ timeSincePreviousUpdate: TimeInterval) {
+        guard let playerPosition = playerAnimatedSpriteComponent?.spriteNode.position else { return }
+        guard let enemyPosition = enemyAnimatedSpriteComponent?.spriteNode.position else { return }
+        if(self.isPaused != true) {
+            self.moveEnemy(playerPosition: playerPosition, enemyPosition: enemyPosition)
+            playerControlComponent?.update(deltaTime: timeSincePreviousUpdate)
+            enemyControlComponent?.update(deltaTime: timeSincePreviousUpdate)
+        }
         if let spritePosition = playerAnimatedSpriteComponent?.spriteNode.position {
             sceneCamera.position = spritePosition
         }
-        playerControlComponent?.update(deltaTime: timeSincePreviousUpdate)
     }
 
+    func moveEnemy(playerPosition: CGPoint, enemyPosition: CGPoint) {
+        let xDistance = pow(enemyPosition.x - playerPosition.x, 2.0)
+        let yDistance = pow(enemyPosition.y - playerPosition.y, 2.0)
+        let distance = (xDistance + yDistance).squareRoot()
+        if(distance <= 500.0) {
+            let velocity = determineVelocity(playerPosition: playerPosition, enemyPosition: enemyPosition)
+            self.enemyMoveComponent?.velocity = velocity
+            enemyControlComponent?.stateMachine.enterIfNeeded(EnemyWalkState.self)
+        } else {
+            enemyControlComponent?.stateMachine.enterIfNeeded(IdleState.self)
+        }
+    }
+
+    func determineVelocity(playerPosition: CGPoint, enemyPosition: CGPoint) -> CGPoint {
+        var velocityX: CGFloat = 7.0
+        var velocityY: CGFloat = 7.0
+        if abs(playerPosition.x - enemyPosition.x) <= 10 {
+            velocityX = 0
+        } else if (playerPosition.x < enemyPosition.x) {
+            velocityX *= -1
+        }
+        if abs(playerPosition.y - enemyPosition.y) <= 10 {
+            velocityY = 0
+        } else if (playerPosition.y < enemyPosition.y) {
+            velocityY *= -1
+        }
+        return CGPoint(x: velocityX, y: velocityY)
+    }
 }

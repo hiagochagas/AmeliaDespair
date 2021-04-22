@@ -24,28 +24,28 @@
 		572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */; };
 		572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */; };
 		572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572E3826260A34E100A2FFD1 /* UIColorExtension.swift */; };
+		573287CE2631BA3C0007F3F7 /* PlayerWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 573287CA2631BA3C0007F3F7 /* PlayerWalkLeft.atlas */; };
+		573287CF2631BA3C0007F3F7 /* PlayerWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 573287CB2631BA3C0007F3F7 /* PlayerWalkRight.atlas */; };
+		573287D02631BA3C0007F3F7 /* PlayerWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 573287CC2631BA3C0007F3F7 /* PlayerWalkUp.atlas */; };
+		573287D12631BA3C0007F3F7 /* PlayerWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 573287CD2631BA3C0007F3F7 /* PlayerWalkDown.atlas */; };
+		573287D62631BA790007F3F7 /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 573287D42631BA790007F3F7 /* ActionButton.png */; };
+		573287D72631BA790007F3F7 /* PauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 573287D52631BA790007F3F7 /* PauseIcon.png */; };
 		5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5751BF252600D3F50032D010 /* SceneDelegate.swift */; };
 		57531ACB26091C12005EEA5F /* IdleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57531ACA26091C12005EEA5F /* IdleState.swift */; };
 		57531ACF26091C46005EEA5F /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57531ACE26091C46005EEA5F /* Direction.swift */; };
 		575E10852608C8E9000F414E /* AttackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10842608C8E9000F414E /* AttackComponent.swift */; };
-		575E10892608CB87000F414E /* ActionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 575E10882608CB87000F414E /* ActionButton.png */; };
-		575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */; };
 		575E10BD2608E4A9000F414E /* WalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10BC2608E4A9000F414E /* WalkState.swift */; };
 		575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575E10C42608E7C5000F414E /* PlayerControlComponent.swift */; };
-		578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */; };
-		578AD3432610103000CCEA5F /* PlayerWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */; };
 		578AD349261014E700CCEA5F /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578AD348261014E700CCEA5F /* CGPointExtension.swift */; };
 		578AD3622610296000CCEA5F /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578AD3612610296000CCEA5F /* CGFloatExtension.swift */; };
 		578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578F26DE2602477700B421E4 /* MoveComponentTests.swift */; };
 		57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926710260B6C5100FFB0E4 /* ImageButton.swift */; };
-		5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5792672C260B7B0700FFB0E4 /* PauseIcon.png */; };
 		57926739260B7FF200FFB0E4 /* PauseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926738260B7FF200FFB0E4 /* PauseNode.swift */; };
 		57926741260B840600FFB0E4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57926740260B840600FFB0E4 /* GameScene.swift */; };
 		5796D4AE260F482200D353F5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5796D4AD260F482200D353F5 /* MenuScene.swift */; };
 		57BC6C4B260E267A00180822 /* LabelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC6C4A260E267A00180822 /* LabelButton.swift */; };
 		57CAD839260A14C100B5FACC /* PlayerAtlasName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */; };
 		57CAD840260A1BC200B5FACC /* GKStateMachineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */; };
-		57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */; };
 		57F2F415262EFD9700084479 /* OfficeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2F414262EFD9700084479 /* OfficeNode.swift */; };
 		57F2F419262EFE3900084479 /* GameBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F2F418262EFE3800084479 /* GameBackground.png */; };
 		57F2F432262F098800084479 /* Kitchen in Resources */ = {isa = PBXBuildFile; fileRef = 57F2F42E262F098700084479 /* Kitchen */; };
@@ -55,11 +55,21 @@
 		57FE9F3C263186D2001A7369 /* LivingRoomNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE9F3B263186D2001A7369 /* LivingRoomNode.swift */; };
 		57FE9F482631B0F0001A7369 /* InvisibleWallEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE9F472631B0F0001A7369 /* InvisibleWallEntity.swift */; };
 		57FE9F4C2631B24B001A7369 /* BackgroundWallsNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FE9F4B2631B24B001A7369 /* BackgroundWallsNode.swift */; };
+		690AA447262EFB3F003DA1E8 /* WalkStateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690AA446262EFB3F003DA1E8 /* WalkStateTest.swift */; };
+		690AA44B2630685F003DA1E8 /* IdleStateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690AA44A2630685F003DA1E8 /* IdleStateTest.swift */; };
 		6E18B6AD261B363C00E1A75C /* SoundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18B6AC261B363C00E1A75C /* SoundComponent.swift */; };
 		6E18B6BD261B48D800E1A75C /* playerWalking.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E18B6BC261B48D800E1A75C /* playerWalking.wav */; };
 		6E18B6C1261B51BE00E1A75C /* SoundComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */; };
 		6E18B6C7261B5BCB00E1A75C /* bump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6E18B6C6261B5BCB00E1A75C /* bump.wav */; };
+		6E2937CE26306CDC0037921E /* EnemyWalkUp.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6E2937CD26306CDC0037921E /* EnemyWalkUp.atlas */; };
 		6E6D6272261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */; };
+		6EB9518B262EFD8C00B64F78 /* EnemyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */; };
+		6EB9518F262EFDC000B64F78 /* EnemyAtlasName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB9518E262EFDC000B64F78 /* EnemyAtlasName.swift */; };
+		6EB951B1262F167A00B64F78 /* EnemyWalkDown.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */; };
+		6EB951B5262F168000B64F78 /* EnemyWalkLeft.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */; };
+		6EB951B9262F168900B64F78 /* EnemyWalkRight.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */; };
+		6EB951C1262F55BF00B64F78 /* EnemyControlComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */; };
+		6EB951C7262F55E400B64F78 /* EnemyWalkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */; };
 		6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */; };
 		6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8AE25FFA3BF007A751D /* GameNode.swift */; };
 		6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF9A8B025FFA3BF007A751D /* GameViewController.swift */; };
@@ -96,30 +106,30 @@
 		572E381C260A322900A2FFD1 /* Gruppo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gruppo-Regular.ttf"; sourceTree = "<group>"; };
 		572E3822260A348100A2FFD1 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		572E3826260A34E100A2FFD1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		573287CA2631BA3C0007F3F7 /* PlayerWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkLeft.atlas; sourceTree = "<group>"; };
+		573287CB2631BA3C0007F3F7 /* PlayerWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkRight.atlas; sourceTree = "<group>"; };
+		573287CC2631BA3C0007F3F7 /* PlayerWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkUp.atlas; sourceTree = "<group>"; };
+		573287CD2631BA3C0007F3F7 /* PlayerWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkDown.atlas; sourceTree = "<group>"; };
+		573287D42631BA790007F3F7 /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionButton.png; sourceTree = "<group>"; };
+		573287D52631BA790007F3F7 /* PauseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseIcon.png; sourceTree = "<group>"; };
 		5751BF252600D3F50032D010 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57531ACA26091C12005EEA5F /* IdleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleState.swift; sourceTree = "<group>"; };
 		57531ACE26091C46005EEA5F /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		575E10842608C8E9000F414E /* AttackComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackComponent.swift; sourceTree = "<group>"; };
-		575E10882608CB87000F414E /* ActionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActionButton.png; sourceTree = "<group>"; };
-		575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkDown.atlas; sourceTree = "<group>"; };
 		575E10BC2608E4A9000F414E /* WalkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkState.swift; sourceTree = "<group>"; };
 		575E10C42608E7C5000F414E /* PlayerControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlComponent.swift; sourceTree = "<group>"; };
-		578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkLeft.atlas; sourceTree = "<group>"; };
-		578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkRight.atlas; sourceTree = "<group>"; };
 		578AD348261014E700CCEA5F /* CGPointExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtension.swift; sourceTree = "<group>"; };
 		578AD3612610296000CCEA5F /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		578F26DC2602477700B421E4 /* AmeliaDespairTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmeliaDespairTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		578F26DE2602477700B421E4 /* MoveComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveComponentTests.swift; sourceTree = "<group>"; };
 		578F26E02602477700B421E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57926710260B6C5100FFB0E4 /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
-		5792672C260B7B0700FFB0E4 /* PauseIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseIcon.png; sourceTree = "<group>"; };
 		57926738260B7FF200FFB0E4 /* PauseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseNode.swift; sourceTree = "<group>"; };
 		57926740260B840600FFB0E4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		5796D4AD260F482200D353F5 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		57BC6C4A260E267A00180822 /* LabelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButton.swift; sourceTree = "<group>"; };
 		57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAtlasName.swift; sourceTree = "<group>"; };
 		57CAD83F260A1BC200B5FACC /* GKStateMachineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKStateMachineExtension.swift; sourceTree = "<group>"; };
-		57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = PlayerWalkUp.atlas; sourceTree = "<group>"; };
 		57F2F414262EFD9700084479 /* OfficeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeNode.swift; sourceTree = "<group>"; };
 		57F2F418262EFE3800084479 /* GameBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameBackground.png; sourceTree = "<group>"; };
 		57F2F42B262EFF4000084479 /* Amelia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Amelia.png; sourceTree = "<group>"; };
@@ -131,11 +141,21 @@
 		57FE9F3F263189E3001A7369 /* PlacementReference.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlacementReference.sks; sourceTree = "<group>"; };
 		57FE9F472631B0F0001A7369 /* InvisibleWallEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleWallEntity.swift; sourceTree = "<group>"; };
 		57FE9F4B2631B24B001A7369 /* BackgroundWallsNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWallsNode.swift; sourceTree = "<group>"; };
+		690AA446262EFB3F003DA1E8 /* WalkStateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkStateTest.swift; sourceTree = "<group>"; };
+		690AA44A2630685F003DA1E8 /* IdleStateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleStateTest.swift; sourceTree = "<group>"; };
 		6E18B6AC261B363C00E1A75C /* SoundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundComponent.swift; sourceTree = "<group>"; };
 		6E18B6BC261B48D800E1A75C /* playerWalking.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerWalking.wav; sourceTree = "<group>"; };
 		6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundComponentTests.swift; sourceTree = "<group>"; };
 		6E18B6C6261B5BCB00E1A75C /* bump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bump.wav; sourceTree = "<group>"; };
+		6E2937CD26306CDC0037921E /* EnemyWalkUp.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkUp.atlas; sourceTree = "<group>"; };
 		6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSpriteComponentTests.swift; sourceTree = "<group>"; };
+		6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyEntity.swift; sourceTree = "<group>"; };
+		6EB9518E262EFDC000B64F78 /* EnemyAtlasName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyAtlasName.swift; sourceTree = "<group>"; };
+		6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkDown.atlas; sourceTree = "<group>"; };
+		6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkLeft.atlas; sourceTree = "<group>"; };
+		6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = EnemyWalkRight.atlas; sourceTree = "<group>"; };
+		6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EnemyControlComponent.swift; path = AmeliaDespair/Components/EnemyControlComponent.swift; sourceTree = SOURCE_ROOT; };
+		6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyWalkState.swift; sourceTree = "<group>"; };
 		6EF9A8A525FFA3BF007A751D /* AmeliaDespair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmeliaDespair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EF9A8A825FFA3BF007A751D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6EF9A8AE25FFA3BF007A751D /* GameNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNode.swift; sourceTree = "<group>"; };
@@ -170,6 +190,10 @@
 				57F2F42A262EFF2F00084479 /* Character */,
 				57F2F42C262EFF4D00084479 /* Scenery */,
 				57F2F42D262EFF9D00084479 /* HUD */,
+				6E2937CD26306CDC0037921E /* EnemyWalkUp.atlas */,
+				6EB951B8262F168900B64F78 /* EnemyWalkRight.atlas */,
+				6EB951B4262F168000B64F78 /* EnemyWalkLeft.atlas */,
+				6EB951B0262F167A00B64F78 /* EnemyWalkDown.atlas */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -180,6 +204,7 @@
 				571625922605891B00477D9E /* DrawingPlane.swift */,
 				57531ACE26091C46005EEA5F /* Direction.swift */,
 				57CAD838260A14C100B5FACC /* PlayerAtlasName.swift */,
+				6EB9518E262EFDC000B64F78 /* EnemyAtlasName.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -210,6 +235,7 @@
 				5721ECE42600DCF100A7071C /* FriendlyNPCEntity.swift */,
 				5716258B260583DC00477D9E /* SceneryEntity.swift */,
 				57FE9F472631B0F0001A7369 /* InvisibleWallEntity.swift */,
+				6EB9518A262EFD8C00B64F78 /* EnemyEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -217,6 +243,7 @@
 		5751BF1D2600D2B10032D010 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6EB951C0262F55BF00B64F78 /* EnemyControlComponent.swift */,
 				5721ECE72600DD3500A7071C /* MovementComponent.swift */,
 				5721ECEA2600DD5000A7071C /* AnimatedSpriteComponent.swift */,
 				6EFDEC582603765600B21561 /* CollisionComponent.swift */,
@@ -270,6 +297,7 @@
 			children = (
 				57531ACA26091C12005EEA5F /* IdleState.swift */,
 				575E10BC2608E4A9000F414E /* WalkState.swift */,
+				6EB951C6262F55E400B64F78 /* EnemyWalkState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -282,6 +310,8 @@
 				6E18B6C0261B51BE00E1A75C /* SoundComponentTests.swift */,
 				6E6D6271261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift */,
 				578F26E02602477700B421E4 /* Info.plist */,
+				690AA446262EFB3F003DA1E8 /* WalkStateTest.swift */,
+				690AA44A2630685F003DA1E8 /* IdleStateTest.swift */,
 			);
 			path = AmeliaDespairTests;
 			sourceTree = "<group>";
@@ -319,11 +349,11 @@
 		57F2F42A262EFF2F00084479 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				573287CD2631BA3C0007F3F7 /* PlayerWalkDown.atlas */,
+				573287CA2631BA3C0007F3F7 /* PlayerWalkLeft.atlas */,
+				573287CB2631BA3C0007F3F7 /* PlayerWalkRight.atlas */,
+				573287CC2631BA3C0007F3F7 /* PlayerWalkUp.atlas */,
 				57F2F42B262EFF4000084479 /* Amelia.png */,
-				57CAD856260A1E5400B5FACC /* PlayerWalkUp.atlas */,
-				575E10B72608E0D8000F414E /* PlayerWalkDown.atlas */,
-				578AD33E2610101D00CCEA5F /* PlayerWalkLeft.atlas */,
-				578AD3422610103000CCEA5F /* PlayerWalkRight.atlas */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -343,8 +373,8 @@
 		57F2F42D262EFF9D00084479 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				575E10882608CB87000F414E /* ActionButton.png */,
-				5792672C260B7B0700FFB0E4 /* PauseIcon.png */,
+				573287D42631BA790007F3F7 /* ActionButton.png */,
+				573287D52631BA790007F3F7 /* PauseIcon.png */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -475,24 +505,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57CAD857260A1E5400B5FACC /* PlayerWalkUp.atlas in Resources */,
-				575E10B82608E0D8000F414E /* PlayerWalkDown.atlas in Resources */,
-				578AD33F2610101D00CCEA5F /* PlayerWalkLeft.atlas in Resources */,
-				578AD3432610103000CCEA5F /* PlayerWalkRight.atlas in Resources */,
 				57F2F434262F098800084479 /* Hallway in Resources */,
 				57F2F432262F098800084479 /* Kitchen in Resources */,
 				57F2F433262F098800084479 /* LivingRoom in Resources */,
 				57F2F435262F098800084479 /* Office in Resources */,
+				6EB951B9262F168900B64F78 /* EnemyWalkRight.atlas in Resources */,
+				6E2937CE26306CDC0037921E /* EnemyWalkUp.atlas in Resources */,
+				573287CE2631BA3C0007F3F7 /* PlayerWalkLeft.atlas in Resources */,
+				573287D72631BA790007F3F7 /* PauseIcon.png in Resources */,
 				6E18B6C7261B5BCB00E1A75C /* bump.wav in Resources */,
+				573287D62631BA790007F3F7 /* ActionButton.png in Resources */,
 				6E18B6BD261B48D800E1A75C /* playerWalking.wav in Resources */,
 				572E3823260A348100A2FFD1 /* Montserrat-Light.ttf in Resources */,
-				5792672D260B7B0700FFB0E4 /* PauseIcon.png in Resources */,
+				573287CF2631BA3C0007F3F7 /* PlayerWalkRight.atlas in Resources */,
+				573287D12631BA3C0007F3F7 /* PlayerWalkDown.atlas in Resources */,
 				6EF9A8B625FFA3C0007A751D /* Assets.xcassets in Resources */,
 				57F2F419262EFE3900084479 /* GameBackground.png in Resources */,
-				575E10892608CB87000F414E /* ActionButton.png in Resources */,
 				572E381D260A326F00A2FFD1 /* Gruppo-Regular.ttf in Resources */,
+				6EB951B1262F167A00B64F78 /* EnemyWalkDown.atlas in Resources */,
 				5721ECF12600DDD200A7071C /* AudioPlaceholder in Resources */,
 				5721ECD82600DBB700A7071C /* LaunchScreen.storyboard in Resources */,
+				573287D02631BA3C0007F3F7 /* PlayerWalkUp.atlas in Resources */,
+				6EB951B5262F168000B64F78 /* EnemyWalkLeft.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,8 +559,10 @@
 			files = (
 				578F26DF2602477700B421E4 /* MoveComponentTests.swift in Sources */,
 				6E6D6272261DF0E800C7B2A6 /* AnimatedSpriteComponentTests.swift in Sources */,
+				690AA447262EFB3F003DA1E8 /* WalkStateTest.swift in Sources */,
 				6EFDEC5D2603822000B21561 /* CollisionComponentTests.swift in Sources */,
 				6E18B6C1261B51BE00E1A75C /* SoundComponentTests.swift in Sources */,
+				690AA44B2630685F003DA1E8 /* IdleStateTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +578,7 @@
 				57BC6C4B260E267A00180822 /* LabelButton.swift in Sources */,
 				6EFDEC592603765600B21561 /* CollisionComponent.swift in Sources */,
 				57FE9F4C2631B24B001A7369 /* BackgroundWallsNode.swift in Sources */,
+				6EB9518B262EFD8C00B64F78 /* EnemyEntity.swift in Sources */,
 				57531ACF26091C46005EEA5F /* Direction.swift in Sources */,
 				575E10C52608E7C5000F414E /* PlayerControlComponent.swift in Sources */,
 				575E10852608C8E9000F414E /* AttackComponent.swift in Sources */,
@@ -553,12 +590,14 @@
 				57FE9F482631B0F0001A7369 /* InvisibleWallEntity.swift in Sources */,
 				38D25A1A263197A3008DF6C2 /* KitchenNode.swift in Sources */,
 				572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */,
+				6EB951C7262F55E400B64F78 /* EnemyWalkState.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
 				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,
 				5721ECDF2600DCBB00A7071C /* LongHandsEntity.swift in Sources */,
 				57926711260B6C5100FFB0E4 /* ImageButton.swift in Sources */,
 				6E18B6AD261B363C00E1A75C /* SoundComponent.swift in Sources */,
 				57926739260B7FF200FFB0E4 /* PauseNode.swift in Sources */,
+				6EB951C1262F55BF00B64F78 /* EnemyControlComponent.swift in Sources */,
 				6EF9A8A925FFA3BF007A751D /* AppDelegate.swift in Sources */,
 				5721ECE52600DCF100A7071C /* FriendlyNPCEntity.swift in Sources */,
 				38CD87EE263070CB0007BC25 /* HallwayNode.swift in Sources */,
@@ -566,6 +605,7 @@
 				5751BF262600D3F50032D010 /* SceneDelegate.swift in Sources */,
 				5721ECFA2600EA8100A7071C /* AnalogJoystick.swift in Sources */,
 				578AD349261014E700CCEA5F /* CGPointExtension.swift in Sources */,
+				6EB9518F262EFDC000B64F78 /* EnemyAtlasName.swift in Sources */,
 				5721ECE82600DD3500A7071C /* MovementComponent.swift in Sources */,
 				571954A2261F440B00A75935 /* GameOverNode.swift in Sources */,
 				57F2F415262EFD9700084479 /* OfficeNode.swift in Sources */,
@@ -759,7 +799,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 828XYUZTZQ;
+				DEVELOPMENT_TEAM = BSANZ76H3Y;
 				INFOPLIST_FILE = AmeliaDespair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
