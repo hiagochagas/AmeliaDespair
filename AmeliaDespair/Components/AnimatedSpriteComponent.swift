@@ -3,7 +3,7 @@
 //  AmeliaDespair
 //
 //  Created by Rodrigo Matos Aguiar on 16/03/21.
-//
+// swiftlint:disable trailing_whitespace
 
 import GameplayKit
 
@@ -18,6 +18,12 @@ class AnimatedSpriteComponent: GKComponent {
     override init() {
         super.init()
         self.spriteNode = SKSpriteNode(color: .white, size: CGSize(width: 100, height: 100))
+        self.spriteNode.lightingBitMask = 0b0001
+    }
+    
+    init(color: UIColor, size: CGSize) {
+        super.init()
+        self.spriteNode = SKSpriteNode(color: color, size: size)
         self.spriteNode.lightingBitMask = 0b0001
     }
 

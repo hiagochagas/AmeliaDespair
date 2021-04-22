@@ -58,16 +58,16 @@ class GameNode: SKNode {
     }
 
     init(camera: SKCameraNode) {
-//        camera.setScale(3.0)
+        camera.setScale(3.0)
         self.sceneCamera = camera
         super.init()
         setupPlayerSprite()
-        setupEnemySprite()
+        //setupEnemySprite()
         setupJoystick()
         setupBackground()
         setupRooms()
         setupPauseButton()
-        setupLighting()
+        //setupLighting()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -159,13 +159,15 @@ class GameNode: SKNode {
         addChild(kitchenNode)
     }
 
-//    func setupBackgroundWalls() {
-//        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
-//            return
-//        }
-//        let backgroundWalls = BackgroundWallsNode()
-//        backgroundSprite.addChild(backgroundWalls)
-//    }
+    func setupBackgroundWalls() {
+        guard let backgroundSprite = background.component(ofType: AnimatedSpriteComponent.self)?.spriteNode else {
+            return
+        }
+        
+        let backgroundWalls = BackgroundWallsNode()
+        
+        backgroundSprite.addChild(backgroundWalls)
+    }
 
     func setupPauseButton() {
         pauseButton.position = convert(pauseButton.position, to: sceneCamera)
