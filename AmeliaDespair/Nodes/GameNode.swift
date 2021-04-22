@@ -58,16 +58,17 @@ class GameNode: SKNode {
     }
 
     init(camera: SKCameraNode) {
-        camera.setScale(3.0)
+//        camera.setScale(3.0)
         self.sceneCamera = camera
         super.init()
         setupPlayerSprite()
-        //setupEnemySprite()
+        setupEnemySprite()
         setupJoystick()
         setupBackground()
         setupRooms()
         setupPauseButton()
-        //setupLighting()
+        setupLighting()
+        setupBackgroundWalls()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -107,7 +108,7 @@ class GameNode: SKNode {
             collisionComponent.loadCollision(physicsBody: physicsBody)
         }
         enemySprite.zPosition = DrawingPlane.character.rawValue
-        enemySprite.position = CGPoint(x: 150, y: 150)
+        enemySprite.position = CGPoint(x: -400, y: 600)
         enemySprite.setScale(0.15)
         addChild(enemySprite)
     }
@@ -205,8 +206,8 @@ class GameNode: SKNode {
     }
 
     func determineVelocity(playerPosition: CGPoint, enemyPosition: CGPoint) -> CGPoint {
-        var velocityX: CGFloat = 7.0
-        var velocityY: CGFloat = 7.0
+        var velocityX: CGFloat = 20.0
+        var velocityY: CGFloat = 20.0
         if abs(playerPosition.x - enemyPosition.x) <= 10 {
             velocityX = 0
         } else if (playerPosition.x < enemyPosition.x) {
