@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38CD87EE263070CB0007BC25 /* HallwayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CD87ED263070CB0007BC25 /* HallwayNode.swift */; };
+		38D25A1A263197A3008DF6C2 /* KitchenNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D25A19263197A3008DF6C2 /* KitchenNode.swift */; };
 		5716258C260583DC00477D9E /* SceneryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5716258B260583DC00477D9E /* SceneryEntity.swift */; };
 		571625932605891B00477D9E /* DrawingPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571625922605891B00477D9E /* DrawingPlane.swift */; };
 		571954A2261F440B00A75935 /* GameOverNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571954A1261F440B00A75935 /* GameOverNode.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		38CD87ED263070CB0007BC25 /* HallwayNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallwayNode.swift; sourceTree = "<group>"; };
+		38D25A19263197A3008DF6C2 /* KitchenNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenNode.swift; sourceTree = "<group>"; };
 		5716258B260583DC00477D9E /* SceneryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneryEntity.swift; sourceTree = "<group>"; };
 		571625922605891B00477D9E /* DrawingPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPlane.swift; sourceTree = "<group>"; };
 		571954A1261F440B00A75935 /* GameOverNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverNode.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				571954A1261F440B00A75935 /* GameOverNode.swift */,
 				57F2F414262EFD9700084479 /* OfficeNode.swift */,
 				38CD87ED263070CB0007BC25 /* HallwayNode.swift */,
+				38D25A19263197A3008DF6C2 /* KitchenNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				575E10BD2608E4A9000F414E /* WalkState.swift in Sources */,
 				6EF9A8AF25FFA3BF007A751D /* GameNode.swift in Sources */,
 				578AD3622610296000CCEA5F /* CGFloatExtension.swift in Sources */,
+				38D25A1A263197A3008DF6C2 /* KitchenNode.swift in Sources */,
 				572E3827260A34E100A2FFD1 /* UIColorExtension.swift in Sources */,
 				6EF9A8B125FFA3BF007A751D /* GameViewController.swift in Sources */,
 				571625932605891B00477D9E /* DrawingPlane.swift in Sources */,

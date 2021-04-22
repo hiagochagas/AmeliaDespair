@@ -107,10 +107,13 @@ class GameNode: SKNode {
     func setupRooms() {
         let officeNode = OfficeNode()
         let hallwayNode = HallwayNode()
+        let kitchenNode = KitchenNode()
         officeNode.position = CGPoint(x: UIScreen.main.bounds.midX + 700, y: UIScreen.main.bounds.midY - 790)
         addChild(officeNode)
         hallwayNode.position = CGPoint(x: UIScreen.main.bounds.midX + 490, y: UIScreen.main.bounds.minY + 250)
         addChild(hallwayNode)
+        kitchenNode.position = CGPoint(x: UIScreen.main.bounds.midX - 750, y: UIScreen.main.bounds.minY + 250)
+        addChild(kitchenNode)
     }
 
     func setupPauseButton() {
