@@ -41,7 +41,7 @@ class GameViewController: UIViewController {
         // Debugging booleans
 //        gameSceneView.showsFPS = true
 //        gameSceneView.showsNodeCount = true
-//        gameSceneView.showsPhysics = true
+        gameSceneView.showsPhysics = true
     }
 
     override var shouldAutorotate: Bool {

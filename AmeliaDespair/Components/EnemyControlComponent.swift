@@ -24,5 +24,5 @@ class EnemyControlComponent: GKComponent {
     override func update(deltaTime seconds: TimeInterval) {
         self.stateMachine.currentState?.update(deltaTime: seconds)
     }
-    
+
 }

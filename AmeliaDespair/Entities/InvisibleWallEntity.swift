@@ -1,17 +1,10 @@
-//
-//  BackgroundEntity.swift
-//  AmeliaDespair
-//
-//  Created by Rodrigo Matos Aguiar on 19/03/21.
-//
-
 import GameplayKit
 
-class BackgroundEntity: GKEntity {
+class InvisibleWallEntity: GKEntity {
 
     override init() {
         super.init()
-        self.addComponent(AnimatedSpriteComponent(imageName: "GameBackground"))
+        self.addComponent(AnimatedSpriteComponent())
         self.addComponent(CollisionComponent())
     }
 

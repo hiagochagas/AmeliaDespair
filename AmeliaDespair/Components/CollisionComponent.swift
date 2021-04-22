@@ -43,4 +43,16 @@ class CollisionComponent: GKComponent {
         spriteNode.physicsBody = physicsBody
     }
 
+    /// Loads the collision and makes it ready for use.
+    ///
+    /// You need to call this method when using CollisionComponent, preferably before setting the sprite node's position.
+    /// - Parameter physicsBody: The physics body of the collision component.
+    func loadCollision(physicsBody: SKPhysicsBody) {
+        physicsBody.affectedByGravity = false
+        physicsBody.allowsRotation = false
+        //for some reason, the contactTestBitMask needs to get a value for the detection of collision
+        physicsBody.contactTestBitMask = 2
+        spriteNode?.physicsBody = physicsBody
+    }
+
 }
